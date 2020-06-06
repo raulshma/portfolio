@@ -4,7 +4,7 @@
 ## TODO
 
  - [x] Create under construction page.
- - [ ] Create Logo
+ - [x] Create Logo
  - [ ] Create a design
  - [ ] Implement design & code
  - [ ] Done
