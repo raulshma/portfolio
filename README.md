@@ -1,10 +1,9 @@
 
-# Portfolio
+# raulshma.xyz
 
-## TODO
+This repository contains the source code for [raulshma.xyz](https://raulshma.xyz)
 
- - [x] Create under construction page.
- - [x] Create Logo
- - [ ] Create a design
- - [ ] Implement design & code
- - [ ] Done
+# License
+Source code is licensed under the MIT license.
+
+Contents of this site are © Copyright 2010 Rahul Sharma. All rights reserved.
