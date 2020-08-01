@@ -1,0 +1,25 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "This repository contains the source code for [raulshma.xyz](https://raulshma.xyz)",
+  "main": "index.js",
+  "scripts": {
+    "build": "postcss src/css/styles.css -o dist/css/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raulshma/portfolio.git"
+  },
+  "keywords": [],
+  "author": "raulshma",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/raulshma/portfolio/issues"
+  },
+  "homepage": "https://github.com/raulshma/portfolio#readme",
+  "dependencies": {
+    "autoprefixer": "^9.8.6",
+    "postcss-cli": "^7.1.1",
+    "tailwindcss": "^1.6.0"
+  }
+}
