@@ -1,6 +1,7 @@
 html,
 body {
-  font-family: "Raleway", sans-serif;
+  scroll-behavior: smooth;
+  font-family: "Raleway", sans-serif !important;
 }
 
 .loading {
@@ -31,53 +32,32 @@ body {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
 }
 
-.borderFadeBottom {
-  padding-bottom: 1px;
-  position: relative;
-}
-
-.borderFadeBottom::after {
-  content: "";
+.circleScaleBtn::before {
+  content: '';
   position: absolute;
-  height: 2px;
-  width: 100%;
-  left: 0;
-  bottom: 0;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
+  transition: opacity .4s cubic-bezier(.19, 1, .22, 1), transform .75s cubic-bezier(.19, 1, .22, 1);
+  background-color: hsl(243, 80%, 62%);
   opacity: 0;
-  transform: translateY(3px);
-  background: hsl(0, 0%, 38%);
-  transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
-.borderFadeBottom:hover::after {
+.circleScaleBtn:hover span {
+  color: hsl(222, 100%, 95%);
+}
+
+.circleScaleBtn:hover::before {
   opacity: 1;
-  transform: translateY(0);
-}
-
-.borderLeftRight {
-  display: inline-block;
-  position: relative;
-}
-
-.borderLeftRight::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: hsl(256, 100%, 76%);
-  transform-origin: bottom right;
-  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-}
-
-.borderLeftRight:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
+  transition-duration: 1.6s;
+  transform: translate3d(-50%, -50%, 0) scale3d(1, 1, 1)
 }
