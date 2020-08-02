@@ -8,7 +8,6 @@ window.addEventListener('load', () => {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-  // if (!isTouchDevice())
   const scrollEle = document.querySelector('.gotoTop');
   const scrollEleBtn = document.querySelector('#gotoTopBtn');
   let removed = false;
@@ -40,7 +39,7 @@ const fadeEffect = setInterval(() => {
     loader.style.opacity = 1;
   }
   if (loader.style.opacity > 0) {
-    loader.style.opacity -= 0.2;
+    loader.style.opacity -= 0.1;
   } else {
     clearInterval(fadeEffect);
     loader.remove();
@@ -49,7 +48,6 @@ const fadeEffect = setInterval(() => {
 
 const scrollToElement = (elementName) => {
   const scrollEle = document.getElementById(elementName);
-  // if (!isTouchDevice() && scrollEle) instance.scroll(scrollEle, 1000);
   if (scrollEle) instance.scroll(scrollEle, 1000);
 };
 
@@ -65,11 +63,3 @@ const getParams = (url) => {
   }
   return false;
 };
-
-// function isTouchDevice() {
-//   return (
-//     'ontouchstart' in window ||
-//     navigator.maxTouchPoints > 0 ||
-//     navigator.msMaxTouchPoints > 0
-//   );
-// }

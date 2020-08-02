@@ -33,7 +33,12 @@
   <body class="text-gray-700 tracking-widest">
     <!--LOADER-->
     <div class="loading">
-      <div class="donutSpinner"></div>
+      <div class="loader">
+        <svg viewBox="0 0 80 80">
+          <circle id="test" cx="40" cy="40" r="32"></circle>
+        </svg>
+      </div>
+      <!-- <div class="donutSpinner"></div> -->
     </div>
     <!--LOADER END-->
     <!--SCROLL TO TOP-->
@@ -485,9 +490,96 @@
         </div>
         <!--SKILLS END-->
       </div>
+      <div class="bg-fixed min-h-screen bg-no-repeat bg-cover" id="projects">
+        <!--PROJECTS-->
+        <div
+          class="flex flex-col space-y-8 w-full md:w-1/2 lg:w-1/3 mx-auto font-semibold tracking-widest p-6 pt-8"
+        >
+          <div class="skill_div_main">
+            <h2
+              class="font-bold nowrap text-2xl pl-2 border-gray-500 border-b-2 border-l-2"
+            >
+              PROJECTS
+            </h2>
+          </div>
+          <div class="fc flex-col space-y-8 w-full pb-10">
+            <div
+              class="max-w-sm rounded overflow-hidden shadow-lg border-t-4 border-purple-400"
+            >
+              <div class="fc w-full h-64">
+                <p class="text-6xl font-extrabold italic">BF</p>
+              </div>
+              <div class="px-6 py-4">
+                <div class="text-purple-700 font-bold text-2xl mb-2">
+                  <a
+                    href="https://github.com/raulshma/bugfix-ionic"
+                    rel="noopener"
+                    target="_blank"
+                    >Bugfixes</a
+                  >
+                </div>
+                <p class="text-gray-700 text-base">
+                  A web application built using Ionic and Angular. Which help
+                  you keep track of bugs and their fixes you've found.
+                </p>
+              </div>
+              <div class="px-6 py-4 space-y-1">
+                <span
+                  class="inline-block bg-purple-100 rounded-full border-2 border-purple-200 px-3 py-1 text-sm font-semibold"
+                  >#HTML</span
+                >
+                <span
+                  class="inline-block bg-purple-100 rounded-full border-2 border-purple-200 px-3 py-1 text-sm font-semibold"
+                  >#CSS</span
+                >
+                <span
+                  class="inline-block bg-purple-100 rounded-full border-2 border-purple-200 px-3 py-1 text-sm font-semibold"
+                  >#Javascript</span
+                >
+              </div>
+            </div>
+            <div
+              class="max-w-sm rounded overflow-hidden shadow-lg border-t-4 border-purple-400"
+            >
+              <div class="fc w-full h-64">
+                <p class="text-6xl font-extrabold italic">P</p>
+              </div>
+              <div class="px-6 py-4">
+                <div class="text-purple-700 font-bold text-2xl mb-2">
+                  <a
+                    href="https://github.com/raulshma/parallax-demo"
+                    rel="noopener"
+                    target="_blank"
+                    >Parallax</a
+                  >
+                </div>
+                <p class="text-gray-700 text-base">
+                  A html website showcasing parallax effect along with
+                  transitions built using HTML, CSS and Javascript.
+                </p>
+              </div>
+              <div class="px-6 py-4 space-y-1">
+                <span
+                  class="inline-block bg-purple-100 rounded-full border-2 border-purple-200 px-3 py-1 text-sm font-semibold"
+                  >#Ionic</span
+                >
+                <span
+                  class="inline-block bg-purple-100 rounded-full border-2 border-purple-200 px-3 py-1 text-sm font-semibold"
+                  >#Angular</span
+                >
+                <span
+                  class="inline-block bg-purple-100 rounded-full border-2 border-purple-200 px-3 py-1 text-sm font-semibold"
+                  >#Node.js</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--PROJECTS END-->
+      </div>
     </div>
     <footer
-      class="flex justify-center items-center min-w-full bg-white font-normal fixed bottom-0 h-8 tracking-normal shadow"
+      class="flex justify-center items-center min-w-full bg-white font-bold fixed bottom-0 h-8 tracking-normal shadow"
     >
       <p>
         &copy; 2020
