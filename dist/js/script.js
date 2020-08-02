@@ -10,6 +10,7 @@ window.addEventListener('load', () => {
 document.addEventListener('DOMContentLoaded', function () {
   // if (!isTouchDevice())
   const scrollEle = document.querySelector('.gotoTop');
+  const scrollEleBtn = document.querySelector('#gotoTopBtn');
   let removed = false;
   param = getParams(window.location.href);
   instance = OverlayScrollbars(document.querySelectorAll('body'), {
@@ -20,10 +21,12 @@ document.addEventListener('DOMContentLoaded', function () {
     callbacks: {
       onScroll: (e) => {
         if (e.target.scrollTop > 250 && removed === false) {
-          scrollEle.classList.remove('hidden');
+          scrollEle.classList.remove('opacity-0');
+          scrollEleBtn.classList.remove('cursor-default');
           removed = true;
         } else if (e.target.scrollTop <= 250 && removed === true) {
-          scrollEle.classList.add('hidden');
+          scrollEle.classList.add('opacity-0');
+          scrollEleBtn.classList.add('cursor-default');
           removed = false;
         }
       },

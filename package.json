@@ -4,7 +4,7 @@
   "description": "This repository contains the source code for [raulshma.xyz](https://raulshma.xyz)",
   "main": "index.js",
   "scripts": {
-    "build": "postcss src/css/styles.css -o dist/css/styles.css"
+    "build": "postcss src/css/styles.css -o dist/css/styles.min.css"
   },
   "repository": {
     "type": "git",
