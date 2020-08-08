@@ -12,10 +12,6 @@ footer {
   z-index: 10000;
 }
 
-.gotoTop {
-  z-index: 10001;
-}
-
 .loading {
   display: flex;
   justify-content: center;
@@ -26,7 +22,7 @@ footer {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 9999;
+  z-index: 9999999;
   transition: opacity 0.3s linear;
 }
 

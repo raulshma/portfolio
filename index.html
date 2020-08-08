@@ -13,8 +13,6 @@
 
     <link rel="icon" type="image/icon" href="favicon.ico" />
     <!-- CSS -->
-    <link rel="stylesheet" href="/dist/css/OverlayScrollbars.min.css" />
-    <link rel="stylesheet" href="/dist/css/os-theme-thin-dark.css" />
     <link rel="stylesheet" href="/dist/css/styles.min.css" />
     <link rel="stylesheet" href="/dist/css/custom.css" />
     <link rel="preload"
@@ -27,7 +25,6 @@
         href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     /></noscript>
     <!--JAVASCRIPT-->
-    <script src="dist/js/OverlayScrollbars.min.js" defer></script>
     <script src="dist/js/script.js" defer></script>
   </head>
   <body class="text-gray-700 tracking-widest">
@@ -41,35 +38,6 @@
       <!-- <div class="donutSpinner"></div> -->
     </div>
     <!--LOADER END-->
-    <!--SCROLL TO TOP-->
-    <div
-      class="gotoTop fixed bottom-0 right-0 m-4 mb-0 z-50 opacity-0 transition-all duration-500"
-    >
-      <button
-        aria-label="Goto To Top"
-        id="gotoTopBtn"
-        onclick="scrollToTop()"
-        class="focus:outline-none cursor-default"
-      >
-        <svg
-          class="h-5 w-5 text-purple-800 fill-current"
-          version="1.1"
-          xmlns="http://www.w3.org/2000/svg"
-          x="0px"
-          y="0px"
-          viewBox="0 0 512.008 512.008"
-          xml:space="preserve"
-        >
-          <path
-            d="M263.556,3.123c-4.165-4.164-10.917-4.164-15.083,0L45.807,205.79
-	c-21.838,21.838-21.838,57.245,0,79.083s57.245,21.838,79.083,0l77.781-77.781v251.584c0,29.455,23.878,53.333,53.333,53.333
-	c29.455,0,53.333-23.878,53.333-53.333V207.091l77.781,77.781c21.838,21.838,57.245,21.838,79.083,0s21.838-57.245,0-79.083
-	L263.556,3.123z"
-          />
-        </svg>
-      </button>
-    </div>
-    <!--SCROLL TO TOP END-->
     <div id="scroll">
       <div class="bg-fixed min-h-screen bg-no-repeat bg-cover">
         <!--NAV-->
@@ -121,7 +89,6 @@
             <a
               aria-label="Goto To Skills"
               href="#skills"
-              onclick="scrollToElement('skills')"
               class="circleScaleBtn bg-white relative rounded-sm overflow-hidden w-auto px-5 py-3 focus:outline-none"
             >
               <span class="relative font-bold text-purple-700">Skills</span>
@@ -129,7 +96,6 @@
             <a
               aria-label="Goto To Projects"
               href="#projects"
-              onclick="scrollToElement('projects')"
               class="circleScaleBtn bg-white relative rounded-sm overflow-hidden w-auto px-5 py-3 focus:outline-none"
               ><span class="relative font-bold text-purple-700"
                 >Projects</span
@@ -579,7 +545,7 @@
       </div>
     </div>
     <footer
-      class="flex justify-center items-center min-w-full bg-white font-bold fixed bottom-0 h-8 tracking-normal shadow"
+      class="flex justify-center items-center min-w-full bg-white font-normal fixed bottom-0 h-8 tracking-normal shadow"
     >
       <p>
         &copy; 2020
