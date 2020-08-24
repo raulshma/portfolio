@@ -76,3 +76,7 @@ nav {
   border-top-left-radius: 15px;
   border-bottom-right-radius: 15px;
 }
+
+.m-w-384 {
+  min-width: 24rem;
+}
