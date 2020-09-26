@@ -13,15 +13,15 @@
 
     <link rel="icon" type="image/icon" href="favicon.ico" />
     <!-- CSS -->
-    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" defer />
     <link rel="preload"
-    href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap"
     rel="stylesheet"" as="style" onload="this.onload=null;this.rel='stylesheet'"
     />
     <noscript
       ><link
         rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap"
     /></noscript>
     <!--JAVASCRIPT-->
   </head>
@@ -45,8 +45,35 @@
       </a>
     </main>
     <section id="details">
-      <div></div>
-      <div></div>
+      <div class="details__left">
+        <img
+          class="details__avatar"
+          src="./assets/images/avatar.svg"
+          alt="Avatar"
+        />
+        <h1 class="details__left-heading">Hey, I'm Rahul Sharma</h1>
+        <h2 class="details__left-subheading">A Full Stack Developer</h2>
+      </div>
+      <div class="details__right">
+        <a
+          href="https://github.com/raulshma"
+          class="btn"
+          target="__blank"
+          rel="noopener"
+          >Github</a
+        >
+        <a
+          href="https://twitter.com/raulshma"
+          class="btn"
+          target="__blank"
+          rel="noopener"
+          >Twitter</a
+        >
+        <a href="#projects" class="btn">Projects</a>
+      </div>
+    </section>
+    <section id="projects">
+      <div class="projects"></div>
     </section>
     <footer>
       <p>

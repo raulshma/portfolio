@@ -2,13 +2,24 @@
   --bg-primary: #996888;
   --bg-secondary: #183446;
   --bg-accent: #db6c79;
+  --bg-dark: #01161e;
+  --bg-light: #ebf2fa;
   --text-secondary: #ff9b71;
+  --text-lightdark: #738290;
   --text-primary: #ebf2fa;
-  --text-dark: #01161e;
 }
 * {
   box-sizing: border-box;
   scrollbar-width: thin;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
 }
 
 *::-webkit-scrollbar {
@@ -32,7 +43,7 @@ html {
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Fredoka One', monospace;
+  font-family: 'Montserrat', monospace;
   color: var(--text-primary);
 }
 
@@ -47,60 +58,6 @@ main {
   position: relative;
   overflow: hidden;
 }
-section {
-  display: grid;
-  width: 100%;
-  height: 100vh;
-  background: var(--bg-accent) url(../images/bg-section1.svg) no-repeat fixed;
-  background-size: cover;
-  padding: 4em;
-  overflow: hidden;
-}
-section:nth-of-type(1) {
-  color: var(--text-primary);
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 4em;
-}
-
-section:nth-of-type(1) div {
-  width: 100%;
-  height: 100%;
-}
-
-section:nth-of-type(1) div:nth-of-type(1) {
-  background-color: var(--text-primary);
-}
-
-section:nth-of-type(1) div:nth-of-type(2) {
-  background-color: var(--text-secondary);
-}
-
-footer {
-  display: grid;
-  place-content: center;
-  width: 100%;
-  height: 10vh;
-  overflow: hidden;
-  background: var(--text-dark);
-  padding: 1em;
-  text-align: center;
-}
-
-.header-container {
-  text-align: center;
-  background-color: #183446fa;
-  border: 0.2em solid var(--text-secondary);
-  padding: 0.8rem;
-  animation: fade-in 1.5s ease both;
-}
-
-.heading {
-  margin: 0;
-  color: var(--text-primary);
-  font-size: 3em;
-  letter-spacing: 0.125em;
-}
-
 main a {
   top: 70%;
   left: 50%;
@@ -119,10 +76,123 @@ main a svg {
   fill: none;
   stroke: var(--text-secondary);
 }
+.btn {
+  padding: 12px 24px;
+  margin-bottom: 1em;
+  background-color: var(--bg-light);
+  color: var(--bg-secondary);
+  font-size: 1em;
+  text-decoration: none;
+  border: none;
+  border-radius: 6px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease,
+    background-color 0.25s ease;
+  box-shadow: 0 2px 4px var(--bg-accent), 0 1px 3px var(--bg-accent);
+}
+.btn:focus {
+  outline: none;
+}
+.btn:hover {
+  cursor: pointer;
+  transform: translate3d(0px, -1px, 0px);
+  background-color: rgb(255, 239, 232);
+  box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+}
+
+.header-container {
+  text-align: center;
+  background-color: #183446fa;
+  border: 0.2em solid var(--text-secondary);
+  padding: 0.8rem;
+}
+
+.heading {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 3em;
+  letter-spacing: 0.125em;
+}
 
 /*Arrow Animation*/
 .arrow-down svg {
   animation: ArrowAnimation 1.5s infinite ease-out;
+}
+
+section {
+  display: grid;
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  padding: 4em;
+  overflow: hidden;
+}
+section:nth-of-type(1) {
+  background: var(--bg-accent) url(../images/bg-section1.svg) no-repeat fixed;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 4em;
+}
+section:nth-of-type(2) {
+  background: var(--bg-accent) url(../images/bg-section2.svg) no-repeat fixed;
+}
+
+section div {
+  box-shadow: rgba(255, 255, 255, 0.4) 0px 1px 6px;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+}
+
+section:nth-of-type(1) div {
+  width: 100%;
+  height: 100%;
+}
+
+.details__left {
+  background-color: var(--text-primary);
+  padding: 1rem;
+  color: var(--bg-secondary);
+}
+.details__avatar {
+  width: 10rem;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: inset 4px 4px 1px var(--bg-primary),
+    inset -4px -4px 1px var(--bg-primary);
+  transition: box-shadow 0.7s ease-in-out;
+}
+
+.details__avatar:hover {
+  box-shadow: inset -4px 4px 1px var(--bg-accent),
+    inset 4px -4px 1px var(--bg-accent);
+}
+
+.details__left-heading {
+  padding-top: 1rem;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+.details__left-subheading {
+  padding-top: 0.5em;
+  color: var(--text-lightdark);
+  font-size: 1.1rem;
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 1px;
+}
+.details__right {
+  background-color: var(--text-secondary);
+}
+
+footer {
+  display: grid;
+  place-content: center;
+  width: 100%;
+  height: 10vh;
+  overflow: hidden;
+  background: var(--bg-dark);
+  padding: 1em;
+  text-align: center;
 }
 
 @keyframes ArrowAnimation {
@@ -140,15 +210,6 @@ main a svg {
     -webkit-transform: translateY(10px);
     transform: translateY(10px);
     opacity: 0;
-  }
-}
-
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }
 
