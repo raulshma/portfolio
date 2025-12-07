@@ -18,11 +18,11 @@
   },
   "homepage": "https://github.com/raulshma/portfolio#readme",
   "dependencies": {
-    "autoprefixer": "^9.8.6",
-    "postcss-cli": "^7.1.1",
-    "tailwindcss": "^1.6.0"
+    "autoprefixer": "^10.4.22",
+    "postcss-cli": "^11.0.1",
+    "tailwindcss": "^4.1.17"
   },
   "devDependencies": {
-    "cssnano": "^4.1.10"
+    "cssnano": "^7.1.2"
   }
 }
