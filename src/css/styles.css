@@ -1,43 +1,191 @@
 @import "tailwindcss";
 
-@layer components {
-  .fc {
-    @apply flex items-center justify-center self-center;
+/* Enable cross-document (MPA) view transitions */
+@view-transition {
+  navigation: auto;
+}
+
+@theme {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-display: 'Outfit', sans-serif;
+  
+  --color-background: #050505;
+  --color-surface: #0f0f0f;
+  --color-surface-hover: #171717;
+  --color-primary: #ffffff;
+  --color-secondary: #a1a1aa; /* Zinc-400 */
+  --color-accent: #fca311;
+  
+  /* New Premium Palette */
+  --color-obsidian: #050505;
+  --color-charcoal: #0a0a0a;
+  --color-glass: rgba(255, 255, 255, 0.02);
+  --color-glass-border: rgba(255, 255, 255, 0.06);
+  --color-glass-highlight: rgba(255, 255, 255, 0.08);
+
+  --color-black: #000000;
+  --color-prussian-blue-800: #7e99d5;
+  --color-orange-500: #fca311;
+  --color-alabaster-grey-900: #fafafa;
+  
+  --shadow-glow: 0 0 80px -20px rgba(252, 163, 17, 0.15);
+  --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.36);
+  
+  --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@layer base {
+  body {
+    @apply bg-background text-primary font-sans antialiased selection:bg-accent/30 selection:text-white overflow-x-hidden;
+    background: radial-gradient(circle at top right, #1a1a1a, #050505 40%);
+    background-attachment: fixed;
   }
 
-  .skill_div_main {
-    @apply flex w-full items-center h-auto justify-around;
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight text-white;
+  }
+}
+
+@layer utilities {
+  /* Bento Grid Layout */
+  .bento-grid {
+    @apply grid gap-4 p-4 max-w-7xl mx-auto;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: minmax(180px, auto);
   }
 
-  .skill_div_title {
-    @apply py-1 pl-3 w-64 font-bold;
+  @media (min-width: 640px) {
+    .bento-grid {
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: minmax(200px, auto);
+    }
   }
 
-  .skill_div_range {
-    @apply py-1 relative w-64;
+  @media (min-width: 1024px) {
+    .bento-grid {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(4, minmax(180px, auto));
+      height: 96vh; /* Fits in view on large screens */
+      @apply my-[2vh];
+    }
   }
 
-  .skill_div_range_div--1 {
-    @apply h-2 bg-gray-200 rounded-full;
+  /* Grid Spans */
+  .col-span-1 { grid-column: span 1; }
+  .col-span-2 { grid-column: span 1; } /* Mobile default */
+  .row-span-1 { grid-row: span 1; }
+  .row-span-2 { grid-row: span 1; } /* Mobile default */
+
+  @media (min-width: 640px) {
+    .col-span-2 { grid-column: span 2; }
+    .row-span-2 { grid-row: span 2; }
   }
 
-  .skill_div_range_div--1_inner {
-    @apply absolute h-2 rounded-full bg-purple-600 w-0;
+  /* Glass Card Refined */
+  .glass-card {
+    @apply relative overflow-hidden bg-white/[0.02] border border-white/[0.05] rounded-3xl backdrop-blur-md transition-all duration-500 ease-out;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+  
+  .glass-card:hover {
+    @apply bg-white/[0.04] border-white/[0.1] -translate-y-1;
+    box-shadow: var(--shadow-glow), 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
   }
 
-  .skill_div_range_div--1_inner2 {
-    @apply absolute h-4 flex items-center justify-center w-4 rounded-full bg-white shadow border border-gray-300 -ml-2 top-0 cursor-pointer;
+  .glass-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 10;
+    background: radial-gradient(
+      800px circle at var(--mouse-x, 0px) var(--mouse-y, 0px), 
+      rgba(255, 255, 255, 0.04), 
+      transparent 40%
+    );
+    opacity: 0;
+    transition: opacity 0.5s;
   }
 
-  .skill_div_range_div--1_inner2_div {
-    @apply absolute z-40 opacity-100 mb-2 left-0 min-w-full;
+  .glass-card:hover::before {
+    opacity: 1;
   }
 
-  .skill_div_range_div--1_inner2_div_div {
-    @apply bg-gray-800 -mt-8 text-white truncate text-xs rounded py-1 px-2;
-  }
 
-  .skill_div_range_div--1_inner2_div_svg {
-    @apply absolute text-black w-full h-2 left-0;
+
+   /* Project Card Specifics */
+   .project-card {
+     @apply h-full w-full;
+   }
+   
+   .project-card img {
+     @apply transition-transform duration-700;
+   }
+   
+   .project-card:hover img {
+     @apply scale-110;
+   }
+
+  /* View Transitions */
+  ::view-transition-group(*) {
+     animation-duration: 0.5s;
+     animation-timing-function: var(--ease-spring);
   }
+}
+
+/* Floating Dock for Navigation */
+.dock {
+  @apply fixed bottom-6 left-1/2 -translate-x-1/2 z-50;
+  @apply flex items-center gap-2 p-2 rounded-2xl;
+  @apply bg-black/40 backdrop-blur-xl border border-white/10;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.2), 0 20px 40px -10px rgba(0,0,0,0.5);
+}
+
+.dock-item {
+  @apply p-3 text-white/60 hover:text-white transition-all duration-300 rounded-xl relative;
+}
+
+.dock-item:hover {
+  @apply bg-white/10 -translate-y-2 scale-110;
+}
+
+.dock-item.active {
+  @apply text-accent bg-accent/10;
+}
+
+.dock-tooltip {
+   @apply absolute -top-10 left-1/2 -translate-x-1/2 px-2 py-1;
+   @apply bg-black/80 text-white text-xs rounded border border-white/10;
+   @apply opacity-0 transition-opacity pointer-events-none whitespace-nowrap;
+}
+
+.dock-item:hover .dock-tooltip {
+  @apply opacity-100;
+}
+
+/* View Transition Fixes */
+::view-transition-group(*) {
+  animation-duration: 0.6s;
+  animation-timing-function: var(--ease-spring);
+}
+
+::view-transition-old(*),
+::view-transition-new(*) {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Force rounded corners during transition */
+::view-transition-group(project-container-uniarr),
+::view-transition-group(project-container-myinterviewprep),
+::view-transition-group(project-container-real-estate),
+::view-transition-group(project-container-supply-chain),
+::view-transition-group(project-container-ai-voice),
+::view-transition-group(project-container-tourism-crm),
+::view-transition-group(project-container-license-manager),
+::view-transition-group(project-container-logistics) {
+  border-radius: 1.5rem; /* Match rounded-3xl / rounded-2xl */
+  overflow: hidden;
+  mix-blend-mode: normal;
 }
