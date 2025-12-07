@@ -2,9 +2,11 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "This repository contains the source code for [raulshma.xyz](https://raulshma.xyz)",
-  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "build": "postcss src/css/styles.css -o dist/css/styles.min.css"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "repository": {
     "type": "git",
@@ -17,12 +19,9 @@
     "url": "https://github.com/raulshma/portfolio/issues"
   },
   "homepage": "https://github.com/raulshma/portfolio#readme",
-  "dependencies": {
-    "autoprefixer": "^9.8.6",
-    "postcss-cli": "^7.1.1",
-    "tailwindcss": "^1.6.0"
-  },
   "devDependencies": {
-    "cssnano": "^4.1.10"
+    "@tailwindcss/vite": "^4.1.17",
+    "tailwindcss": "^4.1.17",
+    "vite": "^7.2.6"
   }
 }
