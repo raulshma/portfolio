@@ -16,6 +16,19 @@ export default defineConfig({
     cssMinify: 'lightningcss',
     // Chunk splitting for better caching
     rollupOptions: {
+      input: {
+        main: 'index.html',
+        '404': '404.html',
+        'ai-voice-automation': 'ai-voice-automation.html',
+        'enterprise-license-manager': 'enterprise-license-manager.html',
+        'logistics-aggregator': 'logistics-aggregator.html',
+        'myinterviewprep': 'myinterviewprep.html',
+        'real-estate-analytics': 'real-estate-analytics.html',
+        'supply-chain-management': 'supply-chain-management.html',
+        'tourism-crm': 'tourism-crm.html',
+        'under-construction': 'under-construction.html',
+        'uniarr': 'uniarr.html',
+      },
       output: {
         manualChunks: undefined,
       }
