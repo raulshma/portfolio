@@ -12,7 +12,7 @@
   --color-surface-hover: #eef1ff;
   --color-primary: #151b32;
   --color-secondary: #53617c;
-  --color-accent: #6e48ff;
+  --color-accent: var(--accent);
   --color-obsidian: #000000;
   --color-charcoal: #151b32;
   --color-glass: rgba(255, 255, 255, 0.72);
@@ -34,35 +34,35 @@
   --text: #151b32;
   --muted: #52607b;
   --faint: #687591;
-  --accent: #6e48ff;
-  --accent-strong: #5032d9;
+  --accent: #4c8000;
+  --accent-strong: #3c6100;
   --accent-cool: #0aa7cf;
   --accent-warm: #ff6d4a;
   --accent-gold: #f4a51c;
   --line: #dce2f5;
   --line-strong: #bdc8e8;
-  --brand-mark-bg: #5135d5;
-  --brand-mark-fg: #ffffff;
-  --button-primary-bg: #5135d5;
-  --button-primary-fg: #ffffff;
-  --button-primary-hover-bg: #38239b;
-  --button-primary-hover-fg: #ffffff;
+  --brand-mark-bg: #b7ff4d;
+  --brand-mark-fg: #080b04;
+  --button-primary-bg: #b7ff4d;
+  --button-primary-fg: #080b04;
+  --button-primary-hover-bg: #d9ffa3;
+  --button-primary-hover-fg: #080b04;
   --button-secondary-bg: #ffffff;
-  --button-secondary-fg: #3b239f;
-  --button-secondary-border: #9689df;
-  --button-secondary-hover-bg: #3b239f;
+  --button-secondary-fg: #4c8000;
+  --button-secondary-border: #6b9440;
+  --button-secondary-hover-bg: #4c8000;
   --button-secondary-hover-fg: #ffffff;
-  --button-secondary-hover-border: #3b239f;
+  --button-secondary-hover-border: #4c8000;
   --inverse: #ffffff;
   --inverse-text: #11162b;
   --grid-line: rgba(90, 108, 166, 0.09);
-  --glow-one: rgba(110, 72, 255, 0.16);
+  --glow-one: rgba(183, 255, 77, 0.16);
   --glow-two: rgba(10, 167, 207, 0.13);
-  --card-glow: rgba(110, 72, 255, 0.12);
+  --card-glow: rgba(183, 255, 77, 0.12);
   --project-shadow: 0 1.5rem 4rem rgba(54, 67, 116, 0.13);
   --shadow: 0 1rem 2.4rem rgba(54, 67, 116, 0.1);
   --shadow-large: 0 2rem 5.5rem rgba(46, 58, 104, 0.18);
-  --focus: #6e48ff;
+  --focus: #4c8000;
   --mono: "DM Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 
@@ -441,7 +441,6 @@ button {
 
 .hero {
   position: relative;
-  overflow: hidden;
   min-height: calc(100svh - 6.25rem);
   padding: clamp(2rem, 5vw, 4.5rem) 0 2.25rem;
 }
@@ -541,13 +540,26 @@ button {
   line-height: 1.75;
 }
 
-.hero-actions,
-.case-actions {
+.hero-actions {
+  position: relative;
+  z-index: 3;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 0.9rem;
   margin-top: 2.4rem;
+  padding-bottom: 2.5rem;
+}
+
+.case-actions {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.9rem;
+  margin-top: 2.4rem;
+  padding-bottom: 1.5rem;
 }
 
 .button,
@@ -566,6 +578,7 @@ button {
   font-weight: 500;
   letter-spacing: 0.02em;
   text-decoration: none;
+  will-change: transform;
   transition: transform 220ms var(--ease-out), color 220ms ease, background 220ms ease, border-color 220ms ease;
 }
 
@@ -624,7 +637,7 @@ button {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   max-width: 58rem;
-  margin-top: clamp(3rem, 6vw, 5rem);
+  margin-top: clamp(1rem, 6vw - 2rem, 3rem);
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
@@ -1056,8 +1069,8 @@ button {
   padding: clamp(2rem, 5vw, 5rem);
   color: #ffffff;
   background:
-    radial-gradient(circle at 88% 12%, rgba(255, 255, 255, 0.22), transparent 14rem),
-    linear-gradient(135deg, #5b3de0, #7661ed 56%, #15a7ca);
+    radial-gradient(circle at 88% 12%, rgba(255, 255, 255, 0.16), transparent 14rem),
+    linear-gradient(135deg, #16280b, #223f11 56%, #4c8000);
   border-radius: 1.45rem;
   box-shadow: var(--shadow-large);
 }
@@ -1108,13 +1121,13 @@ button {
 
 .button--light {
   margin-top: 2.1rem;
-  color: #3b239f;
+  color: #16280b;
   background: #ffffff;
 }
 
 .button--light:hover {
   color: #ffffff;
-  background: #171b35;
+  background: #101e08;
 }
 
 .about-card__stamp {
@@ -1769,10 +1782,9 @@ button {
   }
 
   .hero-actions {
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
     gap: 1rem;
     width: 100%;
   }
