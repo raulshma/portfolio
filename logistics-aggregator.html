@@ -1,83 +1,150 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Zopoxo Aggregator Project Details" />
+    <meta
+      name="description"
+      content="Logistics Aggregator Platform — a confidential courier integration and workflow reliability project by Rahul Sharma."
+    />
     <meta name="view-transition" content="same-origin" />
-    <title>Logistics Aggregator Platform | RaulShma</title>
-    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <title>Logistics Aggregator Platform | Rahul Sharma</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;700&display=swap" rel="stylesheet" />
+    <script>
+      try {
+        const theme = localStorage.getItem("portfolio-theme");
+        if (theme) document.documentElement.dataset.theme = theme;
+      } catch {}
+    </script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/src/css/styles.css" />
   </head>
-  <body class="antialiased min-h-screen flex flex-col relative z-0">
+  <body class="project-page">
+    <a class="skip-link" href="#content">Skip to content</a>
 
+    <div class="project-shell" id="top">
+      <header class="project-header">
+        <a class="wordmark" href="/" aria-label="Rahul Sharma — home">
+          <span class="wordmark-mark" aria-hidden="true">RS</span>
+          <span class="wordmark-name">Rahul Sharma</span>
+        </a>
 
-    <main class="flex-grow pt-6 pb-20 px-6">
-      <div class="max-w-4xl mx-auto space-y-20">
+        <div class="project-header__actions">
+          <a href="/#work">Work</a>
+          <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to OLED black theme">
+            <span class="theme-toggle__icon" aria-hidden="true">◐</span>
+          </button>
+          <a href="mailto:me@raulshma.xyz">Contact</a>
+        </div>
+      </header>
 
-        <div class="space-y-8 reveal">
-          <a href="/#projects" onclick="if(history.length > 1){history.back(); return false;}" class="inline-flex items-center gap-2 text-sm text-secondary hover:text-white transition-colors group">
-            <svg class="w-4 h-4 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-            Back to Projects
-          </a>
+      <main class="project-main" id="content">
+        <a class="project-back" href="/#work">← Back to selected work</a>
 
-          <div class="relative aspect-video rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-black/50 backdrop-blur-sm" id="project-hero-container" style="view-transition-name: project-container-logistics">
-               <img src="/images/logistics-aggregator.webp" class="w-full h-full object-cover" fetchpriority="high" />
-          </div>
+        <article class="case-study">
+          <header class="case-hero">
+            <figure class="case-hero__media" style="view-transition-name: project-container-logistics">
+              <img
+                src="/images/logistics-aggregator.webp"
+                alt="Logistics Aggregator Platform interface"
+                fetchpriority="high"
+              />
+            </figure>
 
-          <div class="flex flex-col md:flex-row justify-between items-start gap-8">
-            <div class="space-y-4">
-              <h1 class="text-5xl md:text-6xl font-display font-bold text-white" style="view-transition-name: project-title-logistics">Logistics Aggregator Platform</h1>
-              <div class="flex gap-2">
-                 <span class="px-3 py-1 rounded-full bg-white/10 text-xs font-mono text-accent border border-white/5">.NET Web API</span>
-                 <span class="px-3 py-1 rounded-full bg-white/10 text-xs font-mono text-accent border border-white/5">Refactoring</span>
-                 <span class="px-3 py-1 rounded-full bg-white/10 text-xs font-mono text-accent border border-white/5">Integration</span>
-                 <span class="px-3 py-1 rounded-full bg-white/10 text-xs font-mono text-accent border border-white/5">Logistics</span>
+            <div class="case-hero__content">
+              <p class="case-kicker">Logistics operations · Confidential</p>
+              <h1 style="view-transition-name: project-title-logistics">Logistics Aggregator Platform</h1>
+              <p class="case-lede" style="view-transition-name: project-desc-logistics">
+                A courier aggregator platform. Improved reliability by refactoring legacy modules and enhancing order routing, tracking mechanisms, and external courier integrations.
+              </p>
+              <div class="case-tags" aria-label="Project disciplines">
+                <span class="case-tag">Order routing</span>
+                <span class="case-tag">Courier integrations</span>
+                <span class="case-tag">System refactoring</span>
+              </div>
+              <div class="case-actions">
+                <a href="mailto:me@raulshma.xyz?subject=Logistics%20Aggregator%20Platform">Discuss this project <span aria-hidden="true">↗</span></a>
               </div>
             </div>
-            <div class="flex gap-4">
+          </header>
 
-               <a href="#" target="_blank" class="px-6 py-3 border border-white/20 text-white font-semibold rounded-full hover:bg-white/10 transition-colors flex items-center gap-2">
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" /></svg>
-                <span>GitHub</span>
-              </a>
+          <section class="case-overview" aria-labelledby="logistics-overview">
+            <aside class="case-aside">
+              <p>Snapshot</p>
+              <dl class="case-facts">
+                <div><dt>Focus</dt><dd>Courier aggregation</dd></div>
+                <div><dt>Scope</dt><dd>Reliability improvements</dd></div>
+                <div><dt>Status</dt><dd>Confidential</dd></div>
+              </dl>
+            </aside>
+            <div class="case-copy">
+              <h2 id="logistics-overview">More dependable movement through a complex delivery network.</h2>
+              <p>
+                The platform serves as an aggregator across courier services, where order routing, tracking, and outside integrations all need to remain dependable together.
+              </p>
+              <p>
+                Refactoring legacy modules created a steadier foundation for those workflows and for the changes that follow them.
+              </p>
             </div>
-          </div>
-        </div>
+          </section>
 
+          <section class="case-section" aria-labelledby="logistics-features">
+            <div class="case-section__heading">
+              <p>What the system supports</p>
+              <h2 id="logistics-features">The operational paths behind every shipment.</h2>
+            </div>
+            <div class="case-feature-grid">
+              <article class="case-feature">
+                <h3>Order routing</h3>
+                <p>Routing improvements help orders move through the appropriate courier workflow with greater reliability.</p>
+              </article>
+              <article class="case-feature">
+                <h3>Tracking mechanisms</h3>
+                <p>Tracking capabilities remain connected to the wider operation rather than becoming a separate view of the shipment.</p>
+              </article>
+              <article class="case-feature">
+                <h3>Courier connectivity</h3>
+                <p>External courier integrations are strengthened alongside the platform modules that depend on them.</p>
+              </article>
+            </div>
+          </section>
 
-        <article class="prose prose-invert prose-lg max-w-none text-secondary reveal">
-          <p class="lead text-xl text-white" style="view-transition-name: project-desc-logistics">A courier aggregator platform. Improved reliability by refactoring legacy modules and enhancing order routing, tracking mechanisms, and external courier integrations.</p>
-          
-          <h3 class="text-white">Technologies Used</h3>
-          <ul class="grid grid-cols-2 md:grid-cols-4 gap-4 list-none pl-0 my-8">
-            <li class="p-4 rounded-xl bg-surface border border-white/5 text-center font-semibold text-secondary">.NET Web API</li>
-            <li class="p-4 rounded-xl bg-surface border border-white/5 text-center font-semibold text-secondary">Refactoring</li>
-            <li class="p-4 rounded-xl bg-surface border border-white/5 text-center font-semibold text-secondary">Integration</li>
-            <li class="p-4 rounded-xl bg-surface border border-white/5 text-center font-semibold text-secondary">Logistics</li>
-          </ul>
+          <section class="case-tech" aria-labelledby="logistics-tech">
+            <div class="case-tech__heading">
+              <p>Technology</p>
+              <h2 id="logistics-tech">The working stack.</h2>
+            </div>
+            <div class="case-tech__list" aria-label="Technology stack">
+              <span class="case-tag">.NET Web API</span>
+              <span class="case-tag">Refactoring</span>
+              <span class="case-tag">Integration</span>
+              <span class="case-tag">Logistics</span>
+            </div>
+          </section>
+
+          <nav class="case-pagination" aria-label="Project navigation">
+            <a href="/jellyplay.html">
+              <span class="case-pagination__label">Start again</span>
+              <strong>JellyPlay →</strong>
+            </a>
+          </nav>
         </article>
-      </div>
-    </main>
+      </main>
 
+      <footer class="site-footer">
+        <p>© <span id="current-year"></span> Rahul Sharma</p>
+        <div>
+          <a href="https://github.com/raulshma" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="#top">Back to top ↑</a>
+        </div>
+      </footer>
+    </div>
 
-    <nav class="dock">
-      <a href="/" class="dock-item">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
-        <span class="dock-tooltip">Home</span>
-      </a>
-      <a href="/#projects" class="dock-item active">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
-        <span class="dock-tooltip">Projects</span>
-      </a>
-      <a href="mailto:me@raulshma.xyz" class="dock-item">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-        <span class="dock-tooltip">Contact</span>
-      </a>
-    </nav>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

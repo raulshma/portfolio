@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="MyInterviewPrep is an AI-assisted platform for practicing and improving technical interview skills."
+      content="JellyPlay is an open-source, native Jellyfin client for Android, Android TV, and Fire TV."
     />
     <meta name="view-transition" content="same-origin" />
-    <title>MyInterviewPrep | Rahul Sharma</title>
+    <title>JellyPlay | Rahul Sharma</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -33,6 +33,7 @@
           <span class="wordmark-mark" aria-hidden="true">RS</span>
           <span class="wordmark-name">Rahul Sharma</span>
         </a>
+
         <div class="project-header__actions">
           <a class="project-header__work" href="/#work">Work</a>
           <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to OLED black theme" aria-pressed="false">
@@ -52,91 +53,95 @@
 
         <article class="case-study">
           <header class="case-hero">
-            <figure class="case-hero__media" style="view-transition-name: project-container-myinterviewprep">
-              <img src="/images/myinterviewprep_preview.webp" alt="MyInterviewPrep dashboard showing coding interview practice" fetchpriority="high" />
+            <figure class="case-hero__media" style="view-transition-name: project-container-jellyplay">
+              <img src="https://raulshma.github.io/jellyplay/assets/screenshots/home.webp" alt="JellyPlay home screen showing a media library on Android" fetchpriority="high" />
             </figure>
+
             <div class="case-hero__content">
-              <p class="case-kicker">AI-assisted learning · Web platform</p>
-              <h1 style="view-transition-name: project-title-myinterviewprep">MyInterviewPrep</h1>
-              <p class="case-lede" style="view-transition-name: project-desc-myinterviewprep">
-                A practical interview preparation platform that pairs personalized learning paths with AI-assisted mock interviews and immediate technical feedback.
+              <p class="case-kicker">Open source · Self-hosted media</p>
+              <h1 style="view-transition-name: project-title-jellyplay">JellyPlay</h1>
+              <p class="case-lede" style="view-transition-name: project-desc-jellyplay">
+                A native Jellyfin client for Android, Android TV, and Fire TV—built for a self-hosted media library that feels complete on every screen.
               </p>
-              <ul class="case-tags" aria-label="MyInterviewPrep technologies">
-                <li class="case-tag">Next.js</li><li class="case-tag">React</li><li class="case-tag">MongoDB</li><li class="case-tag">AI SDK</li>
+              <ul class="case-tags" aria-label="JellyPlay technologies">
+                <li class="case-tag">Kotlin</li>
+                <li class="case-tag">Jetpack Compose</li>
+                <li class="case-tag">Material 3</li>
+                <li class="case-tag">Media3</li>
               </ul>
               <div class="case-actions">
-                <a class="case-button case-button--primary" href="https://myinterviewprep.vercel.app/" target="_blank" rel="noreferrer">
-                  Visit product
+                <a class="case-button case-button--primary" href="https://raulshma.github.io/jellyplay/" target="_blank" rel="noreferrer">
+                  Visit JellyPlay
                   <svg aria-hidden="true" viewBox="0 0 16 16" fill="none">
                     <path d="M2.5 8h10M8.5 3.5 13 8l-4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                   </svg>
                 </a>
-                <a class="case-button case-button--secondary" href="https://github.com/raulshma/myinterviewprep" target="_blank" rel="noreferrer">View source ↗</a>
+                <a class="case-button case-button--secondary" href="https://github.com/raulshma/jellyplay" target="_blank" rel="noreferrer">View source ↗</a>
               </div>
             </div>
           </header>
 
-          <section class="case-overview" aria-labelledby="interview-overview">
+          <section class="case-overview" aria-labelledby="jellyplay-overview">
             <aside class="case-aside">
               <p class="case-aside__label">Snapshot</p>
               <dl class="case-facts">
-                <div><dt>Audience</dt><dd>Technical candidates</dd></div>
-                <div><dt>Focus</dt><dd>Practice with feedback</dd></div>
-                <div><dt>Format</dt><dd>Personalized paths</dd></div>
+                <div><dt>Platform</dt><dd>Android, TV & Fire TV</dd></div>
+                <div><dt>Status</dt><dd>Active beta</dd></div>
+                <div><dt>License</dt><dd>GPL-3.0</dd></div>
               </dl>
             </aside>
             <div class="case-copy">
-              <h2 id="interview-overview">Turn uncertain preparation into a repeatable practice.</h2>
+              <h2 id="jellyplay-overview">Self-hosted media, without a compromised client.</h2>
               <p>
-                MyInterviewPrep gives technical candidates a structured place to learn, rehearse, and assess their progress rather than collecting one-off questions and resources.
+                JellyPlay is built from the ground up in Kotlin and Jetpack Compose for people who run a Jellyfin server and expect a genuinely native experience—not a web wrapper.
               </p>
               <p>
-                AI support is used as a practical coaching layer: users can simulate interviews, receive real-time feedback, and choose learning paths that match the gaps they need to close.
+                The app adapts across phones, tablets, foldables, Android TV, and Fire TV while keeping a media library, playback controls, and server tools coherent across form factors.
               </p>
             </div>
           </section>
 
-          <section class="case-section" aria-labelledby="interview-features">
+          <section class="case-section" aria-labelledby="jellyplay-features">
             <div class="case-section__heading">
-              <h2 id="interview-features">Practice that responds to the candidate.</h2>
-              <p>The experience concentrates on the feedback loop between a question, a response, the reasoning behind it, and the next session.</p>
+              <h2 id="jellyplay-features">A full media client, not just a player.</h2>
+              <p>Playback depth, self-hosted control, and platform-aware UI are treated as connected parts of the same product experience.</p>
             </div>
             <div class="case-feature-grid">
               <article class="case-feature">
                 <span class="case-feature__index">01</span>
-                <h3>AI mock interviews</h3>
-                <p>Adaptive interview sessions offer focused technical practice and immediate feedback on an answer or approach.</p>
+                <h3>One adaptive interface</h3>
+                <p>Responsive layouts and dedicated TV interaction patterns carry the experience across mobile, tablet, foldable, and big-screen devices.</p>
               </article>
               <article class="case-feature">
                 <span class="case-feature__index">02</span>
-                <h3>Learning paths</h3>
-                <p>Structured journeys help users move from a goal to the concepts and exercises that support it.</p>
+                <h3>Playback with options</h3>
+                <p>ExoPlayer, libmpv, and LibVLC provide multiple playback engines alongside casting, subtitles, HDR, picture-in-picture, and offline downloads.</p>
               </article>
               <article class="case-feature">
                 <span class="case-feature__index">03</span>
-                <h3>Progress in context</h3>
-                <p>Usage and practice data give learners a clearer picture of where they are improving over time.</p>
+                <h3>Beyond the library</h3>
+                <p>Music with synced lyrics, SyncPlay watch parties, Jellyseerr requests, server administration, and multi-server support extend the core viewing flow.</p>
               </article>
             </div>
           </section>
 
-          <section class="case-tech" aria-labelledby="interview-tech">
+          <section class="case-tech" aria-labelledby="jellyplay-tech">
             <div class="case-tech__heading">
               <p class="case-tech__eyebrow">Technology</p>
-              <h2 id="interview-tech">A modern learning stack.</h2>
+              <h2 id="jellyplay-tech">Native from interface to playback.</h2>
             </div>
             <div class="case-tech__content">
-              <p>The platform combines an app-router web experience, persistent user data, and AI-assisted interactions in a single product surface.</p>
-              <ul class="case-tech__list" aria-label="MyInterviewPrep technology stack">
-                <li>Next.js</li><li>React</li><li>TypeScript</li><li>Tailwind CSS</li><li>MongoDB</li><li>AI SDK</li><li>Clerk</li><li>Stripe</li>
+              <p>Modern Android foundations keep the app modular, reactive, and capable across a broad range of devices and media scenarios.</p>
+              <ul class="case-tech__list" aria-label="JellyPlay technology stack">
+                <li>Kotlin</li><li>Jetpack Compose</li><li>Material 3</li><li>Media3 / ExoPlayer</li><li>libmpv</li><li>LibVLC</li><li>Hilt</li><li>Room</li><li>WorkManager</li><li>OkHttp</li>
               </ul>
             </div>
           </section>
 
           <nav class="case-pagination" aria-label="Project navigation">
-            <a href="/uniarr.html">
+            <a href="/real-estate-analytics.html">
               <span class="case-pagination__label">Next project</span>
-              <strong>UniArr →</strong>
+              <strong>Real Estate Analytics →</strong>
             </a>
           </nav>
         </article>
