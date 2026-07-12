@@ -3,200 +3,270 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="RaulShma - Full Stack Developer. Premium Bento Portfolio." />
+    <meta
+      name="description"
+      content="Rahul Sharma is a senior software engineer who builds clear, durable digital products."
+    />
     <meta name="view-transition" content="same-origin" />
-    <title>RaulShma | Software Engineer</title>
-    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-    
-
+    <title>Rahul Sharma — Software Engineer</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;500;700&display=swap" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@500;600;700&display=swap"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@500;600;700&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    />
     <noscript>
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;500;700&display=swap" rel="stylesheet" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@500;600;700&display=swap"
+        rel="stylesheet"
+      />
     </noscript>
-
-
+    <script>
+      try {
+        const theme = localStorage.getItem('portfolio-theme');
+        if (theme === 'light' || theme === 'oled') document.documentElement.dataset.theme = theme;
+      } catch {}
+    </script>
     <link rel="stylesheet" href="/src/css/styles.css" />
   </head>
-  <body class="bg-background text-primary min-h-screen relative p-4 selection:bg-accent/20">
-    
+  <body class="portfolio-page">
+    <a class="skip-link" href="#content">Skip to content</a>
 
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="wordmark" href="/" aria-label="Rahul Sharma — home">
+          <span class="wordmark-mark" aria-hidden="true">RS</span>
+          <span class="wordmark-name">Rahul Sharma</span>
+        </a>
 
-    <main class="bento-grid">
-      
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="#work">Work</a>
+          <a href="#capabilities">Capabilities</a>
+          <a href="#about">About</a>
+        </nav>
 
-      <div class="glass-card col-span-2 row-span-2 p-8 flex flex-col justify-between group relative overflow-hidden hero-animate hero-delay-1">
-        <div class="absolute top-0 right-0 p-30 opacity-20 transition-opacity group-hover:opacity-10">
-
+        <div class="header-actions">
+          <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to OLED black theme" aria-pressed="false">
+            <span class="theme-toggle__icon" aria-hidden="true">◐</span>
+          </button>
+          <a class="header-cta" href="mailto:me@raulshma.xyz">
+            Start a conversation
+            <svg aria-hidden="true" viewBox="0 0 16 16" fill="none">
+              <path d="M2.5 8h10M8.5 3.5 13 8l-4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
         </div>
-        
-          <div class="flex justify-between items-start z-10">
-           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 backdrop-blur-md">
-            <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-            <span class="text-xs font-medium text-white/80">Available for opportunities</span>
+      </header>
+
+      <main id="content">
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="hero-copy reveal">
+            <div class="eyebrow-row">
+              <span class="availability"><i aria-hidden="true"></i> Available for opportunities</span>
+              <span class="time-readout">India <span aria-hidden="true">/</span> <time id="local-time">IST</time></span>
+            </div>
+
+            <h1 id="hero-title">
+              Digital products<br />
+              with <em>signal,</em><br />
+              not noise.
+            </h1>
+
+            <p class="hero-intro">
+              I’m Rahul Sharma, a senior software engineer turning demanding business problems into elegant, dependable software.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button button--primary" href="#work">
+                Explore selected work
+                <svg aria-hidden="true" viewBox="0 0 16 16" fill="none">
+                  <path d="M2.5 8h10M8.5 3.5 13 8l-4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+              <a class="text-link" href="mailto:me@raulshma.xyz">me@raulshma.xyz</a>
+            </div>
+
+            <div class="hero-proof" aria-label="How Rahul works">
+              <article>
+                <span>01 / Product</span>
+                <strong>Complex workflows made obvious.</strong>
+              </article>
+              <article>
+                <span>02 / Engineering</span>
+                <strong>Systems built to stay dependable.</strong>
+              </article>
+              <article>
+                <span>03 / Interface</span>
+                <strong>Useful experiences with real momentum.</strong>
+              </article>
+            </div>
           </div>
-          <div id="local-time" class="px-3 py-1 rounded-full bg-white/5 border border-white/10 backdrop-blur-md text-xs font-medium text-white/80 font-mono"></div>
+
+          <div class="hero-footnote reveal">
+            <span>Based in India, working globally</span>
+            <span>Scroll to inspect <i aria-hidden="true">↓</i></span>
+          </div>
+        </section>
+
+        <section class="capabilities section-block" id="capabilities" aria-labelledby="capabilities-title">
+          <div class="section-kicker reveal">
+            <span>01</span>
+            <p>What I bring</p>
+          </div>
+
+          <div class="capabilities-heading reveal">
+            <h2 id="capabilities-title">Built for the complicated parts.</h2>
+            <p>From the first rough model to the systems people rely on every day, I bring product thinking and technical depth into the same room.</p>
+          </div>
+
+          <div class="capability-list">
+            <article class="capability reveal">
+              <span class="capability-number">01</span>
+              <div>
+                <h3>Product-minded engineering</h3>
+                <p>Thoughtful software that makes real work feel simpler, faster, and more obvious.</p>
+              </div>
+            </article>
+            <article class="capability reveal">
+              <span class="capability-number">02</span>
+              <div>
+                <h3>Complex systems, made legible</h3>
+                <p>Well-structured platforms, integrations, and workflows that stay maintainable as they grow.</p>
+              </div>
+            </article>
+            <article class="capability reveal">
+              <span class="capability-number">03</span>
+              <div>
+                <h3>Interfaces with intent</h3>
+                <p>Clear, responsive experiences that earn trust without asking users to think too hard.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="stack-strip reveal" aria-label="Selected technology stack">
+            <span class="stack-label">Selected toolkit</span>
+            <div class="stack-items">
+              <span>.NET</span><span>React</span><span>Angular</span><span>Azure</span><span>Docker</span><span>MongoDB</span><span>Stripe</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="work section-block" id="work" aria-labelledby="work-title">
+          <div class="work-heading">
+            <div class="section-kicker reveal">
+              <span>02</span>
+              <p>Selected work</p>
+            </div>
+            <div class="work-heading__copy reveal">
+              <h2 id="work-title">Useful software<br />for real momentum.</h2>
+              <p>A selection of platforms and tools designed to turn complexity into progress.</p>
+            </div>
+          </div>
+
+          <div class="work-grid">
+            <a href="/jellyplay.html" class="project project--featured reveal">
+              <figure>
+                <img src="https://raulshma.github.io/jellyplay/assets/screenshots/home.webp" alt="JellyPlay home screen on Android" width="1080" height="2340" style="view-transition-name: project-container-jellyplay" fetchpriority="high" />
+              </figure>
+              <div class="project-scrim"></div>
+              <div class="project-index">01 / 09</div>
+              <div class="project-copy">
+                <p class="project-type">Open source · Kotlin + Compose</p>
+                <h3 style="view-transition-name: project-title-jellyplay">JellyPlay</h3>
+                <span class="project-action">View case study <i aria-hidden="true">↗</i></span>
+              </div>
+            </a>
+
+            <a href="/real-estate-analytics.html" class="project project--portrait reveal">
+              <figure>
+                <img src="/images/real-estate-analytics.webp" alt="Real Estate Analytics platform dashboard" width="1024" height="1024" style="view-transition-name: project-container-real-estate" loading="lazy" />
+              </figure>
+              <div class="project-scrim"></div>
+              <div class="project-index">02 / 09</div>
+              <div class="project-copy">
+                <p class="project-type">Data platform · .NET 8</p>
+                <h3 style="view-transition-name: project-title-real-estate">Real Estate Analytics</h3>
+                <span class="project-action">View case study <i aria-hidden="true">↗</i></span>
+              </div>
+            </a>
+
+            <a href="/myinterviewprep.html" class="project project--screen reveal">
+              <figure>
+                <img src="/images/myinterviewprep_preview.webp" alt="MyInterviewPrep coding practice dashboard" width="1024" height="1024" style="view-transition-name: project-container-myinterviewprep" loading="lazy" />
+              </figure>
+              <div class="project-scrim"></div>
+              <div class="project-index">03 / 09</div>
+              <div class="project-copy">
+                <p class="project-type">AI-assisted learning</p>
+                <h3 style="view-transition-name: project-title-myinterviewprep">MyInterviewPrep</h3>
+                <span class="project-action">View case study <i aria-hidden="true">↗</i></span>
+              </div>
+            </a>
+          </div>
+
+          <div class="project-directory reveal" aria-label="More projects">
+            <a href="/uniarr.html"><span>04</span><strong>UniArr</strong><em>React Native + Expo</em><i aria-hidden="true">↗</i></a>
+            <a href="/supply-chain-management.html"><span>05</span><strong>Supply Chain Management</strong><em>Angular + Azure</em><i aria-hidden="true">↗</i></a>
+            <a href="/ai-voice-automation.html"><span>06</span><strong>AI Voice Automation</strong><em>Python + AI</em><i aria-hidden="true">↗</i></a>
+            <a href="/tourism-crm.html"><span>07</span><strong>Tourism CRM</strong><em>Angular + CRM</em><i aria-hidden="true">↗</i></a>
+            <a href="/enterprise-license-manager.html"><span>08</span><strong>Enterprise License Manager</strong><em>.NET + Security</em><i aria-hidden="true">↗</i></a>
+            <a href="/logistics-aggregator.html"><span>09</span><strong>Logistics Aggregator</strong><em>C# + Web API</em><i aria-hidden="true">↗</i></a>
+          </div>
+        </section>
+
+        <section class="about section-block" id="about" aria-labelledby="about-title">
+          <div class="about-card reveal">
+            <div class="about-card__label"><span>03</span><span>About the work</span></div>
+            <div class="about-card__content">
+              <h2 id="about-title">Good software should feel calm on the other side of complexity.</h2>
+              <p>I care about the often invisible details: sensible architecture, useful interactions, and the confidence that comes from a system behaving exactly as it should.</p>
+              <a class="button button--light" href="https://github.com/raulshma" target="_blank" rel="noreferrer">
+                Follow the work on GitHub
+                <svg aria-hidden="true" viewBox="0 0 16 16" fill="none">
+                  <path d="M2.5 8h10M8.5 3.5 13 8l-4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+            </div>
+            <div class="about-card__stamp" aria-hidden="true">RS<small>01</small></div>
+          </div>
+        </section>
+
+        <section class="contact section-block" id="contact" aria-labelledby="contact-title">
+          <div class="section-kicker reveal">
+            <span>04</span>
+            <p>Get in touch</p>
+          </div>
+          <div class="contact-main reveal">
+            <h2 id="contact-title">Have a difficult problem<br />worth solving?</h2>
+            <a class="contact-email" href="mailto:me@raulshma.xyz">me@raulshma.xyz <span aria-hidden="true">↗</span></a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>© <span id="current-year">2026</span> Rahul Sharma</p>
+        <div>
+          <a href="https://github.com/raulshma" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://twitter.com/raulshma" target="_blank" rel="noreferrer">X / Twitter</a>
+          <a href="#content">Back to top ↑</a>
         </div>
-
-        <div class="z-10 mt-auto">
-          <h1 class="text-5xl md:text-7xl font-display font-bold text-white tracking-tight mb-4">
-            Rahul<br />
-            <span class="text-white/40">Sharma.</span>
-          </h1>
-          <p class="text-lg text-secondary max-w-md">
-            Senior Software Engineer crafting <span class="text-white">high-performance</span> enterprise solutions.
-          </p>
-        </div>
-      </div>
-
-
-      <div class="glass-card col-span-2 md:col-span-1 row-span-1 p-6 flex flex-col justify-center hero-animate hero-delay-2">
-         <h3 class="text-sm uppercase tracking-wider text-secondary mb-4 font-semibold">Stack</h3>
-         <div class="flex flex-wrap gap-2">
-           <span class="tech-tag">.NET</span>
-           <span class="tech-tag">React</span>
-           <span class="tech-tag">Angular</span>
-           <span class="tech-tag">Azure</span>
-           <span class="tech-tag">Docker</span>
-           <span class="tech-tag">MongoDB</span>
-           <span class="tech-tag">Stripe</span>
-         </div>
-      </div>
-
-
-      <div class="glass-card col-span-2 md:col-span-1 row-span-1 p-0 grid grid-cols-2 hero-animate hero-delay-3">
-         <a href="https://github.com/raulshma" target="_blank" class="flex flex-col items-center justify-center hover:bg-white/5 transition-colors border-r border-white/5 border-b md:border-b-0">
-           <svg class="w-8 h-8 text-white mb-2" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" /></svg>
-           <span class="text-xs text-secondary">Github</span>
-         </a>
-         <a href="https://twitter.com/raulshma" target="_blank" class="flex flex-col items-center justify-center hover:bg-white/5 transition-colors border-b md:border-b-0">
-           <svg class="w-8 h-8 text-white mb-2" fill="currentColor" viewBox="0 0 24 24"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" /></svg>
-           <span class="text-xs text-secondary">Twitter</span>
-         </a>
-          <a href="mailto:me@raulshma.xyz" class="col-span-2 flex items-center justify-center gap-2 py-4 hover:bg-white/5 transition-colors border-t border-white/5 text-sm font-medium">
-           Contact Me
-           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-         </a>
-      </div>
-
-      </div>
-
-
-      <div class="col-span-full py-8 hero-animate hero-delay-4 flex items-end justify-between border-b border-white/10 mb-4 mx-2">
-        <h2 class="text-3xl font-display font-bold text-white">Selected Works</h2>
-        <a href="#projects" class="text-sm text-secondary hover:text-white transition-colors">View All -></a>
-      </div>
-
-
-      <a href="/real-estate-analytics.html" class="glass-card project-card col-span-2 md:col-span-2 row-span-2 group min-h-[300px] hero-animate hero-delay-5 relative block">
-         <img src="/images/real-estate-analytics.webp" alt="Real Estate Analytics" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" style="view-transition-name: project-container-real-estate" loading="lazy" />
-         <div class="card-gradient-overlay p-8 flex flex-col justify-end h-full">
-            <h3 class="text-2xl font-bold text-white mb-2" style="view-transition-name: project-title-real-estate">Real Estate Analytics</h3>
-            <p class="text-white/80 line-clamp-2">Streamlining property data access and analysis with .NET and React.</p>
-         </div>
-      </a>
-
-
-      <a href="/uniarr.html" class="glass-card project-card col-span-2 md:col-span-1 row-span-2 group min-h-[300px] hero-animate hero-delay-5 relative block">
-         <img src="/images/uniarr_preview.webp" alt="UniArr" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" style="view-transition-name: project-container-uniarr" loading="lazy" />
-         <div class="card-gradient-overlay p-6 flex flex-col justify-end h-full">
-            <h3 class="text-xl font-bold text-white mb-2" style="view-transition-name: project-title-uniarr">UniArr</h3>
-            <p class="text-white/80 text-sm">Unified media management.</p>
-         </div>
-      </a>
-
-
-      <a href="/myinterviewprep.html" class="glass-card project-card col-span-2 md:col-span-1 row-span-2 group min-h-[300px] hero-animate hero-delay-5 relative block">
-         <img src="/images/myinterviewprep_preview.webp" alt="MyInterviewPrep" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" style="view-transition-name: project-container-myinterviewprep" loading="lazy" />
-         <div class="card-gradient-overlay p-6 flex flex-col justify-end h-full">
-            <h3 class="text-xl font-bold text-white mb-2" style="view-transition-name: project-title-myinterviewprep">MyInterviewPrep</h3>
-            <p class="text-white/80 text-sm">AI-powered coding prep.</p>
-         </div>
-      </a>
-
-
-      <div id="projects" class="col-span-full grid grid-cols-1 md:grid-cols-3 gap-4 hero-animate hero-delay-5 mt-8">
-        
-        <a href="/supply-chain-management.html" class="glass-card p-4 group flex items-center gap-4 hover:bg-white/5 transition-colors">
-          <img src="/images/supply-chain-management.webp" class="w-16 h-16 rounded-lg object-cover grayscale group-hover:grayscale-0 transition-all" alt="Supply Chain" style="view-transition-name: project-container-supply-chain" />
-          <div>
-            <h4 class="font-bold text-white">Supply Chain</h4>
-            <p class="text-xs text-secondary">Angular + Azure</p>
-          </div>
-        </a>
-
-        <a href="/ai-voice-automation.html" class="glass-card p-4 group flex items-center gap-4 hover:bg-white/5 transition-colors">
-          <img src="/images/ai-voice-automation.webp" class="w-16 h-16 rounded-lg object-cover grayscale group-hover:grayscale-0 transition-all" alt="AI Voice" style="view-transition-name: project-container-ai-voice" />
-          <div>
-            <h4 class="font-bold text-white">AI Voice Auto</h4>
-            <p class="text-xs text-secondary">Python + AI</p>
-          </div>
-        </a>
-
-        <a href="/tourism-crm.html" class="glass-card p-4 group flex items-center gap-4 hover:bg-white/5 transition-colors">
-          <img src="/images/tourism-crm.webp" class="w-16 h-16 rounded-lg object-cover grayscale group-hover:grayscale-0 transition-all" alt="Tourism CRM" style="view-transition-name: project-container-tourism-crm" />
-          <div>
-            <h4 class="font-bold text-white">Tourism CRM</h4>
-            <p class="text-xs text-secondary">Angular + CRM</p>
-          </div>
-        </a>
-        
-        <a href="/enterprise-license-manager.html" class="glass-card p-4 group flex items-center gap-4 hover:bg-white/5 transition-colors">
-          <img src="/images/enterprise-license-manager.webp" class="w-16 h-16 rounded-lg object-cover grayscale group-hover:grayscale-0 transition-all" alt="License Manager" style="view-transition-name: project-container-license-manager" />
-          <div>
-            <h4 class="font-bold text-white">License Manager</h4>
-            <p class="text-xs text-secondary">.NET + Security</p>
-          </div>
-        </a>
-        
-        <a href="/logistics-aggregator.html" class="glass-card p-4 group flex items-center gap-4 hover:bg-white/5 transition-colors">
-           <img src="/images/logistics-aggregator.webp" class="w-16 h-16 rounded-lg object-cover grayscale group-hover:grayscale-0 transition-all" alt="Logistics" style="view-transition-name: project-container-logistics" />
-           <div>
-             <h4 class="font-bold text-white">Logistics App</h4>
-             <p class="text-xs text-secondary">C# + Web API</p>
-           </div>
-         </a>
-
-      </div>
-      
-
-      <footer class="col-span-full py-10 mt-10 text-center border-t border-white/5">
-        <p class="text-sm text-secondary/60">&copy; 2025 RaulShma.</p>
       </footer>
+    </div>
 
-    </main>
-
-
-    <nav class="dock">
-      <a href="/" class="dock-item active">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
-        <span class="dock-tooltip">Home</span>
-      </a>
-      <a href="#projects" class="dock-item">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
-        <span class="dock-tooltip">Projects</span>
-      </a>
-      <a href="mailto:me@raulshma.xyz" class="dock-item">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-        <span class="dock-tooltip">Contact</span>
-      </a>
+    <nav class="mobile-nav-dock" aria-label="Mobile navigation">
+      <a href="#work">Work</a>
+      <a href="#capabilities">Capabilities</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </nav>
-
-
-    <script>
-      function updateTime() {
-        const now = new Date();
-        const options = { timeZone: 'Asia/Kolkata', hour: '2-digit', minute: '2-digit', hour12: false };
-        const timeElement = document.getElementById('local-time');
-        if (timeElement) {
-            timeElement.textContent = now.toLocaleTimeString('en-US', options);
-        }
-      }
-      setInterval(updateTime, 1000);
-      updateTime();
-    </script>
 
     <script type="module" src="/src/main.js"></script>
   </body>

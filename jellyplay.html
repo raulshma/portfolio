@@ -3,9 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="UniArr is a unified mobile hub for managing a self-hosted media stack." />
+    <meta
+      name="description"
+      content="JellyPlay is an open-source, native Jellyfin client for Android, Android TV, and Fire TV."
+    />
     <meta name="view-transition" content="same-origin" />
-    <title>UniArr | Rahul Sharma</title>
+    <title>JellyPlay | Rahul Sharma</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -43,6 +46,7 @@
           <span class="wordmark-mark" aria-hidden="true">RS</span>
           <span class="wordmark-name">Rahul Sharma</span>
         </a>
+
         <div class="project-header__actions">
           <a class="project-header__work" href="/#work">Work</a>
           <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to OLED black theme" aria-pressed="false">
@@ -62,91 +66,95 @@
 
         <article class="case-study">
           <header class="case-hero">
-            <figure class="case-hero__media" style="view-transition-name: project-container-uniarr">
-              <img src="/images/uniarr_preview.webp" alt="UniArr mobile app interface for managing media services" width="1024" height="1024" fetchpriority="high" />
+            <figure class="case-hero__media" style="view-transition-name: project-container-jellyplay">
+              <img src="https://raulshma.github.io/jellyplay/assets/screenshots/home.webp" alt="JellyPlay home screen showing a media library on Android" width="1080" height="2340" fetchpriority="high" />
             </figure>
+
             <div class="case-hero__content">
-              <p class="case-kicker">Mobile product · Media management</p>
-              <h1 style="view-transition-name: project-title-uniarr">UniArr</h1>
-              <p class="case-lede" style="view-transition-name: project-desc-uniarr">
-                A single mobile home for the tools behind a self-hosted media library—designed to discover, manage, and sync releases even when the connection is unreliable.
+              <p class="case-kicker">Open source · Self-hosted media</p>
+              <h1 style="view-transition-name: project-title-jellyplay">JellyPlay</h1>
+              <p class="case-lede" style="view-transition-name: project-desc-jellyplay">
+                A native Jellyfin client for Android, Android TV, and Fire TV—built for a self-hosted media library that feels complete on every screen.
               </p>
-              <ul class="case-tags" aria-label="UniArr technologies">
-                <li class="case-tag">React Native</li><li class="case-tag">Expo</li><li class="case-tag">TypeScript</li><li class="case-tag">Zustand</li>
+              <ul class="case-tags" aria-label="JellyPlay technologies">
+                <li class="case-tag">Kotlin</li>
+                <li class="case-tag">Jetpack Compose</li>
+                <li class="case-tag">Material 3</li>
+                <li class="case-tag">Media3</li>
               </ul>
               <div class="case-actions">
-                <a class="case-button case-button--primary" href="https://github.com/raulshma/uniarr/releases" target="_blank" rel="noreferrer">
-                  View releases
+                <a class="case-button case-button--primary" href="https://raulshma.github.io/jellyplay/" target="_blank" rel="noreferrer">
+                  Visit JellyPlay
                   <svg aria-hidden="true" viewBox="0 0 16 16" fill="none">
                     <path d="M2.5 8h10M8.5 3.5 13 8l-4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                   </svg>
                 </a>
-                <a class="case-button case-button--secondary" href="https://github.com/raulshma/uniarr" target="_blank" rel="noreferrer">View source ↗</a>
+                <a class="case-button case-button--secondary" href="https://github.com/raulshma/jellyplay" target="_blank" rel="noreferrer">View source ↗</a>
               </div>
             </div>
           </header>
 
-          <section class="case-overview" aria-labelledby="uniarr-overview">
+          <section class="case-overview" aria-labelledby="jellyplay-overview">
             <aside class="case-aside">
               <p class="case-aside__label">Snapshot</p>
               <dl class="case-facts">
-                <div><dt>Format</dt><dd>Mobile-first</dd></div>
-                <div><dt>Focus</dt><dd>Media automation</dd></div>
-                <div><dt>Approach</dt><dd>Offline capable</dd></div>
+                <div><dt>Platform</dt><dd>Android, TV & Fire TV</dd></div>
+                <div><dt>Status</dt><dd>Active beta</dd></div>
+                <div><dt>License</dt><dd>GPL-3.0</dd></div>
               </dl>
             </aside>
             <div class="case-copy">
-              <h2 id="uniarr-overview">The media stack, made portable.</h2>
+              <h2 id="jellyplay-overview">Self-hosted media, without a compromised client.</h2>
               <p>
-                UniArr consolidates the individual services used to discover, request, and organize media into one cohesive mobile interface.
+                JellyPlay is built from the ground up in Kotlin and Jetpack Compose for people who run a Jellyfin server and expect a genuinely native experience—not a web wrapper.
               </p>
               <p>
-                The product treats offline support as part of the core workflow, so users can keep an eye on releases and make changes without depending on a perfect connection.
+                The app adapts across phones, tablets, foldables, Android TV, and Fire TV while keeping a media library, playback controls, and server tools coherent across form factors.
               </p>
             </div>
           </section>
 
-          <section class="case-section" aria-labelledby="uniarr-features">
+          <section class="case-section" aria-labelledby="jellyplay-features">
             <div class="case-section__heading">
-              <h2 id="uniarr-features">One control surface for a sprawling setup.</h2>
-              <p>Service integrations are organized around the everyday tasks of finding media, following releases, and keeping a library in shape.</p>
+              <h2 id="jellyplay-features">A full media client, not just a player.</h2>
+              <p>Playback depth, self-hosted control, and platform-aware UI are treated as connected parts of the same product experience.</p>
             </div>
             <div class="case-feature-grid">
               <article class="case-feature">
                 <span class="case-feature__index">01</span>
-                <h3>Unified media hub</h3>
-                <p>Brings Sonarr, Radarr, Jellyseerr, and other media services into a common mobile workflow instead of a collection of disconnected dashboards.</p>
+                <h3>One adaptive interface</h3>
+                <p>Responsive layouts and dedicated TV interaction patterns carry the experience across mobile, tablet, foldable, and big-screen devices.</p>
               </article>
               <article class="case-feature">
                 <span class="case-feature__index">02</span>
-                <h3>Release-aware management</h3>
-                <p>Supports discovery and management flows that make it easier to follow a library as new content moves through the stack.</p>
+                <h3>Playback with options</h3>
+                <p>ExoPlayer, libmpv, and LibVLC provide multiple playback engines alongside casting, subtitles, HDR, picture-in-picture, and offline downloads.</p>
               </article>
               <article class="case-feature">
                 <span class="case-feature__index">03</span>
-                <h3>Offline-first thinking</h3>
-                <p>Robust local state keeps essential information and intended actions available when the network is not.</p>
+                <h3>Beyond the library</h3>
+                <p>Music with synced lyrics, SyncPlay watch parties, Jellyseerr requests, server administration, and multi-server support extend the core viewing flow.</p>
               </article>
             </div>
           </section>
 
-          <section class="case-tech" aria-labelledby="uniarr-tech">
+          <section class="case-tech" aria-labelledby="jellyplay-tech">
             <div class="case-tech__heading">
               <p class="case-tech__eyebrow">Technology</p>
-              <h2 id="uniarr-tech">Native motion, focused state.</h2>
+              <h2 id="jellyplay-tech">Native from interface to playback.</h2>
             </div>
             <div class="case-tech__content">
-              <p>A TypeScript-based React Native stack makes the product portable while keeping its navigation, local state, and service interactions deliberate.</p>
-              <ul class="case-tech__list" aria-label="UniArr technology stack">
-                <li>React Native</li><li>Expo</li><li>TypeScript</li><li>Zustand</li><li>REST APIs</li><li>Offline storage</li>
+              <p>Modern Android foundations keep the app modular, reactive, and capable across a broad range of devices and media scenarios.</p>
+              <ul class="case-tech__list" aria-label="JellyPlay technology stack">
+                <li>Kotlin</li><li>Jetpack Compose</li><li>Material 3</li><li>Media3 / ExoPlayer</li><li>libmpv</li><li>LibVLC</li><li>Hilt</li><li>Room</li><li>WorkManager</li><li>OkHttp</li>
               </ul>
             </div>
           </section>
 
           <nav class="case-pagination" aria-label="Project navigation">
-            <a href="/supply-chain-management.html">
+            <a href="/real-estate-analytics.html">
               <span class="case-pagination__label">Next project</span>
-              <strong>Supply Chain Management →</strong>
+              <strong>Real Estate Analytics →</strong>
             </a>
           </nav>
         </article>

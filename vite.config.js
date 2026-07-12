@@ -21,6 +21,7 @@ export default defineConfig({
         '404': '404.html',
         'ai-voice-automation': 'ai-voice-automation.html',
         'enterprise-license-manager': 'enterprise-license-manager.html',
+        jellyplay: 'jellyplay.html',
         'logistics-aggregator': 'logistics-aggregator.html',
         'myinterviewprep': 'myinterviewprep.html',
         'real-estate-analytics': 'real-estate-analytics.html',
