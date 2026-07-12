@@ -419,15 +419,6 @@ button {
   transform: translateX(0.2rem);
 }
 
-.hero {
-  min-height: calc(100svh - 6.25rem);
-  padding: clamp(2rem, 5vw, 4.5rem) 0 2.25rem;
-}
-
-.hero-copy {
-  max-width: 72rem;
-}
-
 .eyebrow-row,
 .hero-footnote,
 .section-kicker,
@@ -443,6 +434,49 @@ button {
   font-size: 0.63rem;
   letter-spacing: 0.045em;
   text-transform: uppercase;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  min-height: calc(100svh - 6.25rem);
+  padding: clamp(2rem, 5vw, 4.5rem) 0 2.25rem;
+}
+
+.hero::before {
+  position: absolute;
+  top: -2rem;
+  right: 2rem;
+  width: 28rem;
+  height: 28rem;
+  content: "";
+  background-image: radial-gradient(color-mix(in srgb, var(--line-strong) 70%, transparent) 1.5px, transparent 1.5px);
+  background-size: 1.5rem 1.5rem;
+  mask-image: radial-gradient(circle at center, black 30%, transparent 70%);
+  -webkit-mask-image: radial-gradient(circle at center, black 30%, transparent 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero::after {
+  position: absolute;
+  top: 5rem;
+  right: 7rem;
+  width: 14rem;
+  height: 14rem;
+  content: "";
+  border-top: 1px dashed var(--line-strong);
+  border-right: 1px dashed var(--line-strong);
+  border-radius: 0 1rem 0 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.65;
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 2;
+  max-width: 72rem;
 }
 
 .eyebrow-row {
@@ -582,6 +616,8 @@ button {
 }
 
 .hero-proof {
+  position: relative;
+  z-index: 2;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   max-width: 58rem;
@@ -622,6 +658,8 @@ button {
 }
 
 .hero-footnote {
+  position: relative;
+  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1687,6 +1725,21 @@ button {
   .hero {
     min-height: auto;
     padding-top: 2rem;
+  }
+
+  .hero::before {
+    top: -2rem;
+    right: 0;
+    width: 20rem;
+    height: 20rem;
+    background-size: 1.25rem 1.25rem;
+  }
+
+  .hero::after {
+    top: 4rem;
+    right: 4rem;
+    width: 10rem;
+    height: 10rem;
   }
 
   .eyebrow-row {
