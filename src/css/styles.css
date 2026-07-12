@@ -7,62 +7,64 @@
 @theme {
   --font-sans: "Manrope", "Inter", system-ui, sans-serif;
   --font-display: "Outfit", "Manrope", system-ui, sans-serif;
-  --color-background: #f7f8ff;
-  --color-surface: #ffffff;
-  --color-surface-hover: #eef1ff;
-  --color-primary: #151b32;
-  --color-secondary: #53617c;
+  --color-background: var(--canvas);
+  --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-soft);
+  --color-primary: var(--text);
+  --color-secondary: var(--muted);
   --color-accent: var(--accent);
   --color-obsidian: #000000;
-  --color-charcoal: #151b32;
+  --color-charcoal: var(--text);
   --color-glass: rgba(255, 255, 255, 0.72);
   --color-glass-border: rgba(69, 82, 128, 0.17);
   --color-glass-highlight: rgba(255, 255, 255, 0.9);
   --color-black: #000000;
-  --color-prussian-blue-800: #0ca8d1;
-  --color-orange-500: #ff6d4a;
-  --color-alabaster-grey-900: #151b32;
+  --color-prussian-blue-800: var(--accent-cool);
+  --color-orange-500: var(--accent-warm);
+  --color-alabaster-grey-900: var(--text);
 }
 
 :root {
   color-scheme: light;
-  --canvas: #f7f8ff;
-  --canvas-tint: #eef1ff;
+  --canvas: #f5f8f5;
+  --canvas-tint: #eaf1ea;
   --surface: #ffffff;
-  --surface-soft: #f2f4ff;
+  --surface-soft: #eef5ee;
   --surface-glass: rgba(255, 255, 255, 0.72);
-  --text: #151b32;
-  --muted: #52607b;
-  --faint: #687591;
-  --accent: #4c8000;
-  --accent-strong: #3c6100;
-  --accent-cool: #0aa7cf;
-  --accent-warm: #ff6d4a;
-  --accent-gold: #f4a51c;
-  --line: #dce2f5;
-  --line-strong: #bdc8e8;
+  --text: #0b1a0e;
+  --muted: #475569;
+  --faint: #5c6e5c;
+  --accent: #387002;
+  --accent-strong: #224800;
+  --accent-cool: #0891b2;
+  --accent-warm: #dc2626;
+  --accent-gold: #b45309;
+  --line: #cbd5e1;
+  --line-strong: #94a3b8;
   --brand-mark-bg: #b7ff4d;
-  --brand-mark-fg: #080b04;
+  --brand-mark-fg: #0c1b03;
   --button-primary-bg: #b7ff4d;
-  --button-primary-fg: #080b04;
-  --button-primary-hover-bg: #d9ffa3;
-  --button-primary-hover-fg: #080b04;
+  --button-primary-fg: #0c1b03;
+  --button-primary-hover-bg: #d1ff8c;
+  --button-primary-hover-fg: #0c1b03;
   --button-secondary-bg: #ffffff;
-  --button-secondary-fg: #4c8000;
-  --button-secondary-border: #6b9440;
-  --button-secondary-hover-bg: #4c8000;
+  --button-secondary-fg: #387002;
+  --button-secondary-border: #4a7c06;
+  --button-secondary-hover-bg: #387002;
   --button-secondary-hover-fg: #ffffff;
-  --button-secondary-hover-border: #4c8000;
+  --button-secondary-hover-border: #387002;
   --inverse: #ffffff;
-  --inverse-text: #11162b;
-  --grid-line: rgba(90, 108, 166, 0.09);
+  --inverse-text: #0b1a0e;
+  --grid-line: rgba(56, 112, 2, 0.08);
   --glow-one: rgba(183, 255, 77, 0.16);
-  --glow-two: rgba(10, 167, 207, 0.13);
+  --glow-two: rgba(8, 145, 178, 0.12);
   --card-glow: rgba(183, 255, 77, 0.12);
-  --project-shadow: 0 1.5rem 4rem rgba(54, 67, 116, 0.13);
-  --shadow: 0 1rem 2.4rem rgba(54, 67, 116, 0.1);
-  --shadow-large: 0 2rem 5.5rem rgba(46, 58, 104, 0.18);
-  --focus: #4c8000;
+  --project-shadow: 0 1.5rem 4rem rgba(34, 72, 0, 0.08);
+  --shadow: 0 1rem 2.4rem rgba(34, 72, 0, 0.06);
+  --shadow-large: 0 2rem 5.5rem rgba(34, 72, 0, 0.12);
+  --focus: #387002;
+  --skip-link-bg: var(--accent-strong);
+  --skip-link-fg: var(--inverse);
   --mono: "DM Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 
@@ -86,85 +88,89 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
     color-scheme: dark;
-    --canvas: #000000;
-    --canvas-tint: #07070a;
-    --surface: #0d0d11;
-    --surface-soft: #17171d;
-    --surface-glass: rgba(13, 13, 17, 0.72);
-    --text: #f7f7fb;
-    --muted: #b2b3c3;
-    --faint: #888998;
+    --canvas: #050805;
+    --canvas-tint: #090e09;
+    --surface: #0a100a;
+    --surface-soft: #131f13;
+    --surface-glass: rgba(10, 16, 10, 0.72);
+    --text: #f1f7f1;
+    --muted: #9cb09c;
+    --faint: #6d826d;
     --accent: #b7ff4d;
     --accent-strong: #d1ff8c;
     --accent-cool: #59d9ff;
     --accent-warm: #ff8a6e;
     --accent-gold: #ffd166;
-    --line: #24242b;
-    --line-strong: #41414b;
+    --line: #172417;
+    --line-strong: #2a3d2a;
     --brand-mark-bg: #b7ff4d;
     --brand-mark-fg: #080b04;
     --button-primary-bg: #b7ff4d;
     --button-primary-fg: #080b04;
     --button-primary-hover-bg: #d9ffa3;
     --button-primary-hover-fg: #080b04;
-    --button-secondary-bg: #0d0d11;
+    --button-secondary-bg: #0a100a;
     --button-secondary-fg: #d1ff8c;
-    --button-secondary-border: #6b9440;
+    --button-secondary-border: #3a5e12;
     --button-secondary-hover-bg: #d1ff8c;
     --button-secondary-hover-fg: #080b04;
     --button-secondary-hover-border: #d1ff8c;
     --inverse: #ffffff;
-    --inverse-text: #09090b;
-    --grid-line: rgba(255, 255, 255, 0.055);
+    --inverse-text: #050805;
+    --grid-line: rgba(255, 255, 255, 0.04);
     --glow-one: rgba(183, 255, 77, 0.08);
     --glow-two: rgba(89, 217, 255, 0.07);
     --card-glow: rgba(183, 255, 77, 0.08);
-    --project-shadow: 0 1.8rem 4.5rem rgba(0, 0, 0, 0.72);
-    --shadow: 0 1.1rem 2.7rem rgba(0, 0, 0, 0.58);
-    --shadow-large: 0 2.5rem 6rem rgba(0, 0, 0, 0.72);
+    --project-shadow: 0 1.8rem 4.5rem rgba(0, 0, 0, 0.65);
+    --shadow: 0 1.1rem 2.7rem rgba(0, 0, 0, 0.5);
+    --shadow-large: 0 2.5rem 6rem rgba(0, 0, 0, 0.65);
     --focus: #b7ff4d;
+    --skip-link-bg: var(--accent-strong);
+    --skip-link-fg: var(--brand-mark-fg);
   }
 }
 
 :root[data-theme="oled"] {
   color-scheme: dark;
   --canvas: #000000;
-  --canvas-tint: #07070a;
-  --surface: #0d0d11;
-  --surface-soft: #17171d;
-  --surface-glass: rgba(13, 13, 17, 0.72);
-  --text: #f7f7fb;
-  --muted: #b2b3c3;
-  --faint: #888998;
+  --canvas-tint: #050805;
+  --surface: #0a100a;
+  --surface-soft: #131f13;
+  --surface-glass: rgba(10, 16, 10, 0.72);
+  --text: #f1f7f1;
+  --muted: #9cb09c;
+  --faint: #6d826d;
   --accent: #b7ff4d;
   --accent-strong: #d1ff8c;
   --accent-cool: #59d9ff;
   --accent-warm: #ff8a6e;
   --accent-gold: #ffd166;
-  --line: #24242b;
-  --line-strong: #41414b;
+  --line: #172417;
+  --line-strong: #2a3d2a;
   --brand-mark-bg: #b7ff4d;
   --brand-mark-fg: #080b04;
   --button-primary-bg: #b7ff4d;
   --button-primary-fg: #080b04;
   --button-primary-hover-bg: #d9ffa3;
   --button-primary-hover-fg: #080b04;
-  --button-secondary-bg: #0d0d11;
+  --button-secondary-bg: #0a100a;
   --button-secondary-fg: #d1ff8c;
-  --button-secondary-border: #6b9440;
+  --button-secondary-border: #3a5e12;
   --button-secondary-hover-bg: #d1ff8c;
   --button-secondary-hover-fg: #080b04;
   --button-secondary-hover-border: #d1ff8c;
   --inverse: #ffffff;
-  --inverse-text: #09090b;
-  --grid-line: rgba(255, 255, 255, 0.055);
+  --inverse-text: #000000;
+  --grid-line: rgba(255, 255, 255, 0.04);
   --glow-one: rgba(183, 255, 77, 0.08);
   --glow-two: rgba(89, 217, 255, 0.07);
   --card-glow: rgba(183, 255, 77, 0.08);
-  --project-shadow: 0 1.8rem 4.5rem rgba(0, 0, 0, 0.72);
-  --shadow: 0 1.1rem 2.7rem rgba(0, 0, 0, 0.58);
-  --shadow-large: 0 2.5rem 6rem rgba(0, 0, 0, 0.72);
+  --project-shadow: 0 1.8rem 4.5rem rgba(0, 0, 0, 0.8);
+  --shadow: 0 1.1rem 2.7rem rgba(0, 0, 0, 0.65);
+  --shadow-large: 0 2.5rem 6rem rgba(0, 0, 0, 0.8);
   --focus: #b7ff4d;
+  --skip-link-bg: var(--accent-strong);
+  --skip-link-fg: var(--brand-mark-fg);
 }
 
 * {
@@ -237,8 +243,8 @@ button {
   top: 1rem;
   left: 1rem;
   padding: 0.75rem 1rem;
-  color: var(--inverse);
-  background: var(--accent-strong);
+  color: var(--skip-link-fg);
+  background: var(--skip-link-bg);
   border-radius: 0.7rem;
   box-shadow: var(--shadow);
   transform: translateY(-180%);
@@ -247,6 +253,15 @@ button {
 
 .skip-link:focus {
   transform: translateY(0);
+}
+
+.project:focus-visible {
+  outline-color: #b7ff4d;
+}
+
+.about-card:focus-visible,
+.about-card *:focus-visible {
+  outline-color: #b7ff4d;
 }
 
 /* Home ------------------------------------------------------------------ */
@@ -958,7 +973,7 @@ button {
 
 .project-type {
   margin: 0 0 0.72rem;
-  color: #c8ff8f;
+  color: #b7ff4d;
 }
 
 .project h3 {
@@ -987,13 +1002,13 @@ button {
 
 .project-action i {
   margin-left: 0.3rem;
-  color: #c8ff8f;
+  color: #b7ff4d;
   font-style: normal;
 }
 
 .project:hover .project-action {
-  color: #c8ff8f;
-  border-color: #c8ff8f;
+  color: #b7ff4d;
+  border-color: #b7ff4d;
 }
 
 .project-directory {
@@ -1070,7 +1085,7 @@ button {
   color: #ffffff;
   background:
     radial-gradient(circle at 88% 12%, rgba(255, 255, 255, 0.16), transparent 14rem),
-    linear-gradient(135deg, #16280b, #223f11 56%, #4c8000);
+    linear-gradient(135deg, #0b1a03, #153205 56%, #3a7c05);
   border-radius: 1.45rem;
   box-shadow: var(--shadow-large);
 }
@@ -1121,13 +1136,13 @@ button {
 
 .button--light {
   margin-top: 2.1rem;
-  color: #16280b;
+  color: #0b1a03;
   background: #ffffff;
 }
 
 .button--light:hover {
-  color: #ffffff;
-  background: #101e08;
+  color: var(--button-primary-hover-fg);
+  background: var(--button-primary-hover-bg);
 }
 
 .about-card__stamp {
