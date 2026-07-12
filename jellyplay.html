@@ -19,9 +19,22 @@
       } catch {}
     </script>
     <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@500;600;700&display=swap"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@500;600;700&display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@500;600;700&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
     <link rel="stylesheet" href="/src/css/styles.css" />
   </head>
   <body class="project-page">
@@ -54,7 +67,7 @@
         <article class="case-study">
           <header class="case-hero">
             <figure class="case-hero__media" style="view-transition-name: project-container-jellyplay">
-              <img src="https://raulshma.github.io/jellyplay/assets/screenshots/home.webp" alt="JellyPlay home screen showing a media library on Android" fetchpriority="high" />
+              <img src="https://raulshma.github.io/jellyplay/assets/screenshots/home.webp" alt="JellyPlay home screen showing a media library on Android" width="1080" height="2340" fetchpriority="high" />
             </figure>
 
             <div class="case-hero__content">
