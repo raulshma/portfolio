@@ -15,6 +15,34 @@ const getStoredTheme = () => {
 
 const getActiveTheme = () => root.dataset.theme || (systemTheme.matches ? 'oled' : 'light');
 
+const initThemeToggleIcons = () => {
+  document.querySelectorAll('[data-theme-toggle]').forEach((toggle, index) => {
+    const iconContainer = toggle.querySelector('.theme-toggle__icon');
+    if (iconContainer) {
+      const maskId = `theme-mask-${index}`;
+      iconContainer.innerHTML = `
+        <svg class="theme-icon-svg" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+          <mask id="${maskId}">
+            <rect x="0" y="0" width="24" height="24" fill="white" />
+            <circle cx="30" cy="0" r="6" fill="black" class="theme-mask-circle" />
+          </mask>
+          <circle cx="12" cy="12" r="5" fill="currentColor" mask="url(#${maskId})" class="theme-center-circle" />
+          <g class="theme-rays" stroke="currentColor">
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+            <line x1="1" y1="12" x2="3" y2="12" />
+            <line x1="21" y1="12" x2="23" y2="12" />
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+          </g>
+        </svg>
+      `;
+    }
+  });
+};
+
 const updateThemeControls = () => {
   const activeTheme = getActiveTheme();
 
@@ -23,25 +51,55 @@ const updateThemeControls = () => {
     toggle.setAttribute('aria-pressed', String(isOled));
     toggle.setAttribute('aria-label', isOled ? 'Switch to light theme' : 'Switch to OLED black theme');
     toggle.title = isOled ? 'Switch to light theme' : 'Switch to OLED black theme';
-
-    const icon = toggle.querySelector('.theme-toggle__icon');
-    if (icon) icon.textContent = isOled ? '☀' : '◐';
   });
 };
 
-const applyTheme = (theme, persist = false) => {
-  root.dataset.theme = theme;
+const applyTheme = (theme, persist = false, animated = false, event = null) => {
+  const changeTheme = () => {
+    root.dataset.theme = theme;
 
-  if (persist) {
-    try {
-      window.localStorage.setItem(themeStorageKey, theme);
-    } catch {
-      // The site remains fully usable when storage is unavailable.
+    if (persist) {
+      try {
+        window.localStorage.setItem(themeStorageKey, theme);
+      } catch {
+        // The site remains fully usable when storage is unavailable.
+      }
     }
+
+    updateThemeControls();
+  };
+
+  const isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!animated || !document.startViewTransition || isReducedMotion) {
+    changeTheme();
+    return;
   }
 
-  updateThemeControls();
+  // Get click coordinates or default to screen center
+  let x = window.innerWidth / 2;
+  let y = window.innerHeight / 2;
+
+  if (event) {
+    const rect = event.currentTarget.getBoundingClientRect();
+    x = event.clientX || (rect.left + rect.width / 2);
+    y = event.clientY || (rect.top + rect.height / 2);
+  }
+
+  // Calculate radius to the furthest viewport corner
+  const endRadius = Math.hypot(
+    Math.max(x, window.innerWidth - x),
+    Math.max(y, window.innerHeight - y)
+  );
+
+  root.style.setProperty('--theme-toggle-x', `${x}px`);
+  root.style.setProperty('--theme-toggle-y', `${y}px`);
+  root.style.setProperty('--theme-toggle-r', `${endRadius}px`);
+
+  document.startViewTransition(changeTheme);
 };
+
+// Initialize SVG icons immediately
+initThemeToggleIcons();
 
 const storedTheme = getStoredTheme();
 if (storedTheme) {
@@ -51,8 +109,8 @@ if (storedTheme) {
 }
 
 document.querySelectorAll('[data-theme-toggle]').forEach((toggle) => {
-  toggle.addEventListener('click', () => {
-    applyTheme(getActiveTheme() === 'oled' ? 'light' : 'oled', true);
+  toggle.addEventListener('click', (event) => {
+    applyTheme(getActiveTheme() === 'oled' ? 'light' : 'oled', true, true, event);
   });
 });
 
