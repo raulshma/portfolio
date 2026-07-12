@@ -102,7 +102,7 @@ if (reducedMotion || !('IntersectionObserver' in window)) {
   revealItems.forEach((item) => revealObserver.observe(item));
 }
 
-const navLinks = [...document.querySelectorAll('.site-nav a[href^="#"]')];
+const navLinks = [...document.querySelectorAll('.site-nav a[href^="#"], .mobile-nav-dock a[href^="#"]')];
 const navTargets = navLinks
   .map((link) => ({ link, target: document.querySelector(link.getAttribute('href')) }))
   .filter(({ target }) => target);
@@ -128,4 +128,23 @@ if (navTargets.length && 'IntersectionObserver' in window) {
   );
 
   navTargets.forEach(({ target }) => sectionObserver.observe(target));
+}
+
+// Auto-hide mobile navigation dock on scroll down
+let lastScrollY = window.scrollY;
+const mobileNav = document.querySelector('.mobile-nav-dock');
+if (mobileNav) {
+  window.addEventListener('scroll', () => {
+    const currentScrollY = window.scrollY;
+    if (currentScrollY > lastScrollY && currentScrollY > 50) {
+      mobileNav.style.transform = 'translate(-50%, 150%)';
+      mobileNav.style.opacity = '0';
+      mobileNav.style.pointerEvents = 'none';
+    } else {
+      mobileNav.style.transform = 'translate(-50%, 0)';
+      mobileNav.style.opacity = '1';
+      mobileNav.style.pointerEvents = 'auto';
+    }
+    lastScrollY = currentScrollY;
+  }, { passive: true });
 }
