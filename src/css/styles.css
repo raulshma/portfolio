@@ -2129,7 +2129,7 @@ button {
 
 ::view-transition-new(root) {
   z-index: 9999;
-  animation: 600ms cubic-bezier(0.4, 0, 0.2, 1) both theme-reveal-circle;
+  animation: 800ms cubic-bezier(0.7, 0, 0.05, 1) both theme-reveal-circle;
 }
 
 @keyframes theme-reveal-circle {
@@ -2146,24 +2146,24 @@ button {
   display: block;
   width: 1.15rem;
   height: 1.15rem;
-  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 700ms cubic-bezier(0.7, 0, 0.05, 1);
   transform-origin: center;
 }
 
 .theme-mask-circle {
-  transition: cx 500ms cubic-bezier(0.4, 0, 0.2, 1), cy 500ms cubic-bezier(0.4, 0, 0.2, 1), r 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: cx 700ms cubic-bezier(0.7, 0, 0.05, 1), cy 700ms cubic-bezier(0.7, 0, 0.05, 1), r 700ms cubic-bezier(0.7, 0, 0.05, 1);
   cx: 30px;
   cy: 0px;
   r: 6px;
 }
 
 .theme-center-circle {
-  transition: r 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: r 700ms cubic-bezier(0.7, 0, 0.05, 1);
   r: 5px;
 }
 
 .theme-rays {
-  transition: opacity 400ms cubic-bezier(0.4, 0, 0.2, 1), transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 550ms cubic-bezier(0.7, 0, 0.05, 1), transform 700ms cubic-bezier(0.7, 0, 0.05, 1);
   transform-origin: center;
   opacity: 1;
 }
