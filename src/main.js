@@ -206,3 +206,24 @@ if (mobileNav) {
     lastScrollY = currentScrollY;
   }, { passive: true });
 }
+
+// Header sticky detection via IntersectionObserver
+document.querySelectorAll('.site-header, .project-header').forEach((header) => {
+  const sentinel = document.createElement('div');
+  sentinel.className = 'header-sentinel';
+  sentinel.style.height = '0';
+  sentinel.style.margin = '0';
+  sentinel.style.padding = '0';
+  sentinel.style.pointerEvents = 'none';
+  sentinel.style.visibility = 'hidden';
+  
+  header.parentNode.insertBefore(sentinel, header);
+
+  const observer = new IntersectionObserver((entries) => {
+    const isScrolled = !entries[0].isIntersecting;
+    header.classList.toggle('is-sticky', isScrolled);
+  }, {
+    threshold: [0],
+  });
+  observer.observe(sentinel);
+});

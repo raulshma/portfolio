@@ -26,6 +26,9 @@
 
 :root {
   color-scheme: light;
+  --shell-padding: clamp(1.25rem, 3vw, 4.5rem);
+  --header-bg-glass: rgba(255, 255, 255, 0.72);
+  --header-border-sticky: rgba(203, 213, 225, 0.6);
   --canvas: #f5f8f5;
   --canvas-tint: #eaf1ea;
   --surface: #ffffff;
@@ -88,6 +91,8 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
     color-scheme: dark;
+    --header-bg-glass: rgba(10, 16, 10, 0.72);
+    --header-border-sticky: rgba(23, 36, 23, 0.6);
     --canvas: #050805;
     --canvas-tint: #090e09;
     --surface: #0a100a;
@@ -132,6 +137,8 @@
 
 :root[data-theme="oled"] {
   color-scheme: dark;
+  --header-bg-glass: rgba(0, 0, 0, 0.75);
+  --header-border-sticky: rgba(23, 36, 23, 0.6);
   --canvas: #000000;
   --canvas-tint: #050805;
   --surface: #0a100a;
@@ -276,17 +283,40 @@ button {
   width: min(100%, 1480px);
   min-width: 0;
   margin: 0 auto;
-  padding: 0 clamp(1.25rem, 3vw, 4.5rem);
+  padding: 0 var(--shell-padding);
 }
 
 .site-header,
 .project-header {
+  position: sticky;
+  top: 0;
+  z-index: 90;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
   min-width: 0;
   min-height: 6.25rem;
   border-bottom: 1px solid var(--line);
+  margin-left: calc(-1 * var(--shell-padding));
+  margin-right: calc(-1 * var(--shell-padding));
+  padding-left: var(--shell-padding);
+  padding-right: var(--shell-padding);
+  transition: 
+    min-height 300ms var(--ease-out),
+    background-color 300ms var(--ease-out),
+    backdrop-filter 300ms var(--ease-out),
+    border-color 300ms var(--ease-out),
+    box-shadow 300ms var(--ease-out);
+}
+
+.site-header.is-sticky,
+.project-header.is-sticky {
+  min-height: 4.75rem;
+  background-color: var(--header-bg-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom-color: var(--header-border-sticky);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
 }
 
 .wordmark {
@@ -1722,14 +1752,18 @@ button {
 }
 
 @media (max-width: 700px) {
-  .site-shell,
-  .project-shell {
-    padding: 0 1.15rem;
+  :root {
+    --shell-padding: 1.15rem;
   }
 
   .site-header,
   .project-header {
     min-height: 5.25rem;
+  }
+
+  .site-header.is-sticky,
+  .project-header.is-sticky {
+    min-height: 4.25rem;
   }
 
   .wordmark-name {
